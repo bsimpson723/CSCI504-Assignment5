@@ -114,7 +114,7 @@
             this.GameTimer = new System.Windows.Forms.Timer(this.components);
             this.PauseButton = new System.Windows.Forms.Button();
             this.ProgressButton = new System.Windows.Forms.Button();
-            this.HintButton = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
             this.ClearButton = new System.Windows.Forms.Button();
             this.NewGameLabel = new System.Windows.Forms.Label();
             this.EasyButton = new System.Windows.Forms.Button();
@@ -1043,15 +1043,15 @@
             this.ProgressButton.Text = "Progress";
             this.ProgressButton.UseVisualStyleBackColor = true;
             // 
-            // HintButton
+            // SaveButton
             // 
-            this.HintButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HintButton.Location = new System.Drawing.Point(739, 437);
-            this.HintButton.Name = "HintButton";
-            this.HintButton.Size = new System.Drawing.Size(89, 35);
-            this.HintButton.TabIndex = 86;
-            this.HintButton.Text = "Hint";
-            this.HintButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton.Location = new System.Drawing.Point(739, 437);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(89, 35);
+            this.SaveButton.TabIndex = 86;
+            this.SaveButton.Text = "Save";
+            this.SaveButton.UseVisualStyleBackColor = true;
             // 
             // ClearButton
             // 
@@ -1113,7 +1113,7 @@
             this.Controls.Add(this.EasyButton);
             this.Controls.Add(this.NewGameLabel);
             this.Controls.Add(this.ClearButton);
-            this.Controls.Add(this.HintButton);
+            this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.ProgressButton);
             this.Controls.Add(this.PauseButton);
             this.Controls.Add(this.GameBoard);
@@ -1215,7 +1215,7 @@
         private System.Windows.Forms.Timer GameTimer;
         private System.Windows.Forms.Button PauseButton;
         private System.Windows.Forms.Button ProgressButton;
-        private System.Windows.Forms.Button HintButton;
+        private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button ClearButton;
         private System.Windows.Forms.Label NewGameLabel;
         private System.Windows.Forms.Button EasyButton;
