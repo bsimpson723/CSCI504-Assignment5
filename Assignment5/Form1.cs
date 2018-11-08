@@ -13,13 +13,12 @@ namespace Assignment5
 {
     public partial class Form1 : Form
     {
-        private string puzzleName;
-        private string puzzleStart;
-        private string puzzleSolution;
+        private Puzzle m_puzzle;
 
         public Form1()
         {
             InitializeComponent();
+            m_puzzle = new Puzzle();
         }
 
         private void GameBoard_Paint(object sender, PaintEventArgs e)
@@ -59,21 +58,21 @@ namespace Assignment5
 
             DirectoryInfo directoryInfo = new DirectoryInfo(newDirectoryPath);
             var fileInfo = directoryInfo.GetFiles().FirstOrDefault();
-            puzzleName = fileInfo.Name;
+            m_puzzle.Name = fileInfo.Name;
 
-            var newFileName = newDirectoryPath + puzzleName;
-            puzzleStart = File.ReadAllText(newFileName);
+            var newFileName = newDirectoryPath + m_puzzle.Name;
+            m_puzzle.Start = File.ReadAllText(newFileName);
 
-            var solutionFileName = solutionDirectoryPath + puzzleName;
-            puzzleSolution = File.ReadAllText(solutionFileName);
+            var solutionFileName = solutionDirectoryPath + m_puzzle.Name;
+            m_puzzle.Solution = File.ReadAllText(solutionFileName);
 
             SortGameBoardControls();
 
             for (var i = 0; i < 81; i++)
             {
-                if (puzzleStart[i].ToString() != "0" && puzzleStart[i].ToString() != "\r" && puzzleStart[i].ToString() != "\n")
+                if (m_puzzle.Start[i].ToString() != "0" && m_puzzle.Start[i].ToString() != "\r" && m_puzzle.Start[i].ToString() != "\n")
                 {
-                    GameBoard.Controls[i].Text = puzzleStart[i].ToString();
+                    GameBoard.Controls[i].Text = m_puzzle.Start[i].ToString();
                     GameBoard.Controls[i].Enabled = false;
                 }
             }
