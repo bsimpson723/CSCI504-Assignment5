@@ -1082,7 +1082,7 @@
             this.EasyButton.TabIndex = 89;
             this.EasyButton.Text = "Easy";
             this.EasyButton.UseVisualStyleBackColor = true;
-            this.EasyButton.Click += new System.EventHandler(this.Button_Click);
+            this.EasyButton.Click += new System.EventHandler(this.LoadGame_Click);
             // 
             // MediumButton
             // 
@@ -1093,6 +1093,7 @@
             this.MediumButton.TabIndex = 90;
             this.MediumButton.Text = "Medium";
             this.MediumButton.UseVisualStyleBackColor = true;
+            this.MediumButton.Click += new System.EventHandler(this.LoadGame_Click);
             // 
             // HardButton
             // 
@@ -1103,6 +1104,7 @@
             this.HardButton.TabIndex = 91;
             this.HardButton.Text = "Hard";
             this.HardButton.UseVisualStyleBackColor = true;
+            this.HardButton.Click += new System.EventHandler(this.LoadGame_Click);
             // 
             // Form1
             // 

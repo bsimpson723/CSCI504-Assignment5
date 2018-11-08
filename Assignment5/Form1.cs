@@ -13,6 +13,10 @@ namespace Assignment5
 {
     public partial class Form1 : Form
     {
+        private string puzzleName;
+        private string puzzleStart;
+        private string puzzleSolution;
+
         public Form1()
         {
             InitializeComponent();
@@ -32,20 +36,44 @@ namespace Assignment5
             graphics.DrawLine(pen, 0, 251, 379, 251);
         }
 
-        private void Button_Click(object sender, EventArgs e)
+        private void LoadGame_Click(object sender, EventArgs e)
         {
-            LoadGame();
+            var button = (Button) sender;
+            ClearGameBoard();
+            LoadGame(button.Text);
         }
 
-        private void LoadGame()
+        private void ClearGameBoard()
         {
-            var file = File.ReadAllText("e1.txt");
+            foreach (TextBox control in GameBoard.Controls)
+            {
+                control.Text = "";
+                control.Enabled = true;
+            }
+        }
+
+        private void LoadGame(string folder)
+        {
+            var newDirectoryPath = "./New/" + folder + "/";
+            var solutionDirectoryPath = "./Solutions/";
+
+            DirectoryInfo directoryInfo = new DirectoryInfo(newDirectoryPath);
+            var fileInfo = directoryInfo.GetFiles().FirstOrDefault();
+            puzzleName = fileInfo.Name;
+
+            var newFileName = newDirectoryPath + puzzleName;
+            puzzleStart = File.ReadAllText(newFileName);
+
+            var solutionFileName = solutionDirectoryPath + puzzleName;
+            puzzleSolution = File.ReadAllText(solutionFileName);
+
             SortGameBoardControls();
+
             for (var i = 0; i < 81; i++)
             {
-                if (file[i].ToString() != "0" && file[i].ToString() != "\r" && file[i].ToString() != "\n")
+                if (puzzleStart[i].ToString() != "0" && puzzleStart[i].ToString() != "\r" && puzzleStart[i].ToString() != "\n")
                 {
-                    GameBoard.Controls[i].Text = file[i].ToString();
+                    GameBoard.Controls[i].Text = puzzleStart[i].ToString();
                     GameBoard.Controls[i].Enabled = false;
                 }
             }
