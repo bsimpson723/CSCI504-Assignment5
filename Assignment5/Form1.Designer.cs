@@ -1128,6 +1128,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 33F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 496);
+            this.Controls.Add(this.TimerLabel);
             this.Controls.Add(this.HardButton);
             this.Controls.Add(this.MediumButton);
             this.Controls.Add(this.EasyButton);
