@@ -42,6 +42,14 @@ namespace Assignment5
             LoadGame(button.Text);
         }
 
+        private void Save_Click(object sender, EventArgs e)
+        {
+            Directory.CreateDirectory("./Inprogress/" + m_puzzle.Difficulty);
+            var saveFileName = "./InProgress/" + m_puzzle.Difficulty + "/" + m_puzzle.Name;
+            File.WriteAllText(saveFileName, m_puzzle.ToString());
+            MessageBox.Show("Your puzzle progress was saved successfully!");
+        }
+
         private void ClearGameBoard()
         {
             foreach (TextBox control in GameBoard.Controls)
@@ -63,6 +71,8 @@ namespace Assignment5
             var newFileName = newDirectoryPath + m_puzzle.Name;
             var startString = File.ReadAllText(newFileName);
             m_puzzle.Start = startString.Replace(Environment.NewLine, "");
+
+            m_puzzle.Progress = m_puzzle.Start; //Might need to change this, haven't decided yet
 
             var solutionFileName = solutionDirectoryPath + m_puzzle.Name;
             var solutionString = File.ReadAllText(solutionFileName);
