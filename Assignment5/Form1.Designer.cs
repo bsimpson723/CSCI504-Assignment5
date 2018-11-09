@@ -1242,6 +1242,7 @@
         private System.Windows.Forms.Button EasyButton;
         private System.Windows.Forms.Button MediumButton;
         private System.Windows.Forms.Button HardButton;
+        private System.Windows.Forms.Label TimerLabel;
     }
 }
 
