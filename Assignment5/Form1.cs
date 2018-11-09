@@ -14,6 +14,8 @@ namespace Assignment5
     public partial class Form1 : Form
     {
         private Puzzle m_puzzle;
+        private DateTime start_time;
+        private DateTime stop_time;
 
         public Form1()
         {
@@ -40,6 +42,9 @@ namespace Assignment5
             var button = (Button) sender;
             ClearGameBoard();
             LoadGame(button.Text);
+            
+            start_time = DateTime.Now;
+            GameTimer.Start();
         }
 
         private void Save_Click(object sender, EventArgs e)
@@ -85,7 +90,7 @@ namespace Assignment5
                 if (m_puzzle.Start[i].ToString() != "0")
                 {
                     GameBoard.Controls[i].Text = m_puzzle.Start[i].ToString();
-                    GameBoard.Controls[i].Enabled = false;
+                    ((TextBox)GameBoard.Controls[i]).ReadOnly = true;
                 }
             }
         }
@@ -105,6 +110,55 @@ namespace Assignment5
                 counter++;
             }
 
+        }
+        
+        private void GameTimer_Tick(object sender, EventArgs e)
+        {
+            var diff = DateTime.Now.Subtract(start_time);
+            TimerLabel.Text = String.Format("{0:00}:{1:00}:{2:00}", diff.Hours, diff.Minutes, diff.Seconds);
+        }
+
+        private void PauseButton_Click(object sender, EventArgs e)
+        {
+            Button pauseButton = (Button)sender;
+            if (pauseButton.Text == "Pause")
+            {
+                GameTimer.Stop();
+                stop_time = DateTime.Now;
+                pauseButton.Text = "Resume";
+
+                foreach (TextBox txt in GameBoard.Controls)
+                {
+                    if (txt.ReadOnly)
+                    {
+                        txt.ReadOnly = false;
+                        txt.BackColor = Color.FromArgb(240, 240, 240);
+                        txt.ForeColor = Color.FromArgb(240, 240, 240);
+                    }
+                    else
+                    {
+                        txt.ForeColor = Color.Transparent;
+                    }
+                }
+            } else if (pauseButton.Text == "Resume")
+            {
+                GameTimer.Start();
+                start_time += (DateTime.Now - stop_time);
+                pauseButton.Text = "Pause";
+
+                foreach (TextBox txt in GameBoard.Controls)
+                {
+                    if (txt.ForeColor != Color.Transparent)
+                    {
+                        txt.ForeColor = Color.Black;
+                        txt.ReadOnly = true;
+                    }
+                    else
+                    {
+                        txt.ForeColor = Color.Black;
+                    }
+                }
+            }
         }
     }
 }
