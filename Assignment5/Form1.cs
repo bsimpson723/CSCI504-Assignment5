@@ -61,16 +61,18 @@ namespace Assignment5
             m_puzzle.Name = fileInfo.Name;
 
             var newFileName = newDirectoryPath + m_puzzle.Name;
-            m_puzzle.Start = File.ReadAllText(newFileName);
+            var startString = File.ReadAllText(newFileName);
+            m_puzzle.Start = startString.Replace(Environment.NewLine, "");
 
             var solutionFileName = solutionDirectoryPath + m_puzzle.Name;
-            m_puzzle.Solution = File.ReadAllText(solutionFileName);
+            var solutionString = File.ReadAllText(solutionFileName);
+            m_puzzle.Solution = solutionString.Replace(Environment.NewLine, "");
 
             SortGameBoardControls();
 
             for (var i = 0; i < 81; i++)
             {
-                if (m_puzzle.Start[i].ToString() != "0" && m_puzzle.Start[i].ToString() != "\r" && m_puzzle.Start[i].ToString() != "\n")
+                if (m_puzzle.Start[i].ToString() != "0")
                 {
                     GameBoard.Controls[i].Text = m_puzzle.Start[i].ToString();
                     GameBoard.Controls[i].Enabled = false;
