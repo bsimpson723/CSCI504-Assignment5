@@ -120,6 +120,7 @@
             this.EasyButton = new System.Windows.Forms.Button();
             this.MediumButton = new System.Windows.Forms.Button();
             this.HardButton = new System.Windows.Forms.Button();
+            this.TimerLabel = new System.Windows.Forms.Label();
             this.GameBoard.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1023,6 +1024,11 @@
             this.GameBoard.TabIndex = 83;
             this.GameBoard.Paint += new System.Windows.Forms.PaintEventHandler(this.GameBoard_Paint);
             // 
+            // GameTimer
+            // 
+            this.GameTimer.Interval = 1000;
+            this.GameTimer.Tick += new System.EventHandler(this.GameTimer_Tick);
+            // 
             // PauseButton
             // 
             this.PauseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1032,6 +1038,7 @@
             this.PauseButton.TabIndex = 84;
             this.PauseButton.Text = "Pause";
             this.PauseButton.UseVisualStyleBackColor = true;
+            this.PauseButton.Click += new System.EventHandler(this.PauseButton_Click);
             // 
             // ProgressButton
             // 
@@ -1107,11 +1114,21 @@
             this.HardButton.UseVisualStyleBackColor = true;
             this.HardButton.Click += new System.EventHandler(this.LoadGame_Click);
             // 
+            // TimerLabel
+            // 
+            this.TimerLabel.AutoSize = true;
+            this.TimerLabel.Location = new System.Drawing.Point(170, 430);
+            this.TimerLabel.Name = "TimerLabel";
+            this.TimerLabel.Size = new System.Drawing.Size(164, 42);
+            this.TimerLabel.TabIndex = 92;
+            this.TimerLabel.Text = "00:00:00";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 33F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 496);
+            this.Controls.Add(this.TimerLabel);
             this.Controls.Add(this.HardButton);
             this.Controls.Add(this.MediumButton);
             this.Controls.Add(this.EasyButton);
@@ -1225,6 +1242,7 @@
         private System.Windows.Forms.Button EasyButton;
         private System.Windows.Forms.Button MediumButton;
         private System.Windows.Forms.Button HardButton;
+        private System.Windows.Forms.Label TimerLabel;
     }
 }
 
