@@ -170,6 +170,7 @@ namespace Assignment5
             var fileInfo = directoryInfo.GetFiles().FirstOrDefault();
             m_puzzle.Name = fileInfo.Name;
             m_puzzle.Difficulty = difficulty;
+            m_puzzle.Time = 0;
 
             var newFileName = newDirectoryPath + m_puzzle.Name;
             var startString = File.ReadAllText(newFileName);
