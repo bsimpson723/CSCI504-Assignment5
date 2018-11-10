@@ -14,6 +14,7 @@ namespace Assignment5
     public partial class Form1 : Form
     {
         private Puzzle m_puzzle;
+        private TextBox m_currentCell;
 
         public Form1()
         {
@@ -42,6 +43,60 @@ namespace Assignment5
             ClearGameBoard();
             LoadGame(button.Text);
             GameTimer.Start();
+        }
+
+        private void Cell_Click(object sender, EventArgs e)
+        {
+            var textBox = (TextBox) sender;
+            m_currentCell = textBox;
+            resetActive();
+            textBox.BackColor = SystemColors.GradientActiveCaption;
+            EasyButton.Focus();
+        }
+
+        private void resetActive()
+        {
+            foreach (TextBox control in GameBoard.Controls)
+            {
+                control.BackColor = Color.White;
+            }
+        }
+
+        private void UpdateProgress()
+        {
+            var builder = new StringBuilder();
+            foreach (TextBox cell in GameBoard.Controls)
+            {
+                
+                if (string.IsNullOrEmpty(cell.Text))
+                {
+                    builder.Append(0);
+                }
+                else
+                {
+                    builder.Append(cell.Text);
+                }
+            }
+            m_puzzle.Progress = builder.ToString();
+            CheckForWinner();
+        }
+
+        private void CheckForWinner()
+        {
+            if (m_puzzle.Progress == m_puzzle.Solution)
+            {
+                GameTimer.Stop();
+                MessageBox.Show("Congratulations, you win!");
+            }
+        }
+
+        private void SetCellValue(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar >= 49 && e.KeyChar <= 57 && m_currentCell != null)
+            {
+                m_currentCell.Text = e.KeyChar.ToString();
+                UpdateProgress();
+            }
         }
 
         private void Save_Click(object sender, EventArgs e)
