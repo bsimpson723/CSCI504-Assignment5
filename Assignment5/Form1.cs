@@ -120,6 +120,7 @@ namespace Assignment5
         private void GameTimer_Tick(object sender, EventArgs e)
         {
             var diff = DateTime.Now.Subtract(start_time);
+            m_puzzle.Time = (int)diff.TotalSeconds;
             TimerLabel.Text = String.Format("{0:00}:{1:00}:{2:00}", diff.Hours, diff.Minutes, diff.Seconds);
         }
 
