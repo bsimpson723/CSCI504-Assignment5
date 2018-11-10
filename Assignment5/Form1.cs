@@ -14,13 +14,12 @@ namespace Assignment5
     public partial class Form1 : Form
     {
         private Puzzle m_puzzle;
-        private DateTime start_time;
-        private DateTime stop_time;
 
         public Form1()
         {
             InitializeComponent();
             m_puzzle = new Puzzle();
+            SortGameBoardControls();
         }
 
         private void GameBoard_Paint(object sender, PaintEventArgs e)
@@ -42,8 +41,6 @@ namespace Assignment5
             var button = (Button) sender;
             ClearGameBoard();
             LoadGame(button.Text);
-            
-            start_time = DateTime.Now;
             GameTimer.Start();
         }
 
@@ -64,26 +61,16 @@ namespace Assignment5
             }
         }
 
-        private void LoadGame(string folder)
+        private void LoadGame(string difficulty)
         {
-            var newDirectoryPath = "./New/" + folder + "/";
-            var solutionDirectoryPath = "./Solutions/";
-
-            DirectoryInfo directoryInfo = new DirectoryInfo(newDirectoryPath);
-            var fileInfo = directoryInfo.GetFiles().FirstOrDefault();
-            m_puzzle.Name = fileInfo.Name;
-
-            var newFileName = newDirectoryPath + m_puzzle.Name;
-            var startString = File.ReadAllText(newFileName);
-            m_puzzle.Start = startString.Replace(Environment.NewLine, "");
-
-            m_puzzle.Progress = m_puzzle.Start; //Might need to change this, haven't decided yet
-
-            var solutionFileName = solutionDirectoryPath + m_puzzle.Name;
-            var solutionString = File.ReadAllText(solutionFileName);
-            m_puzzle.Solution = solutionString.Replace(Environment.NewLine, "");
-
-            SortGameBoardControls();
+            if (AnyInProgress(difficulty))
+            {
+                LoadInProgressGame(difficulty);
+            }
+            else
+            {
+                LoadNewGame(difficulty);
+            }
 
             for (var i = 0; i < 81; i++)
             {
@@ -98,6 +85,60 @@ namespace Assignment5
             ProgressButton.Enabled = true;
             SaveButton.Enabled = true;
             ClearButton.Enabled = true;
+        }
+
+        private void LoadInProgressGame(string difficulty)
+        {
+            var progressDirectoryPath = "./InProgress/" + difficulty + "/";
+
+            DirectoryInfo directoryInfo = new DirectoryInfo(progressDirectoryPath);
+            var fileInfo = directoryInfo.GetFiles().FirstOrDefault();
+            m_puzzle.Name = fileInfo.Name;
+            m_puzzle.Difficulty = difficulty;
+
+            var newFileName = progressDirectoryPath + m_puzzle.Name;
+            var puzzle = File.ReadAllText(newFileName);
+            var puzzleFields = puzzle.Split('\t');
+
+            m_puzzle.Start = puzzleFields[1];
+            m_puzzle.Progress = puzzleFields[1]; //yes, we want the start and progress to be the same on initial load
+            m_puzzle.Solution = puzzleFields[2];
+            m_puzzle.Time = Convert.ToInt32(puzzleFields[3]);
+        }
+
+        private void LoadNewGame(string difficulty)
+        {
+            var newDirectoryPath = "./New/" + difficulty + "/";
+            var solutionDirectoryPath = "./Solutions/";
+
+            DirectoryInfo directoryInfo = new DirectoryInfo(newDirectoryPath);
+            var fileInfo = directoryInfo.GetFiles().FirstOrDefault();
+            m_puzzle.Name = fileInfo.Name;
+            m_puzzle.Difficulty = difficulty;
+
+            var newFileName = newDirectoryPath + m_puzzle.Name;
+            var startString = File.ReadAllText(newFileName);
+            m_puzzle.Start = startString.Replace(Environment.NewLine, "");
+
+            m_puzzle.Progress = m_puzzle.Start; //yes, we want the start and progress to be the same on initial load
+
+            var solutionFileName = solutionDirectoryPath + m_puzzle.Name;
+            var solutionString = File.ReadAllText(solutionFileName);
+            m_puzzle.Solution = solutionString.Replace(Environment.NewLine, "");
+        }
+
+        private bool AnyInProgress(string difficulty)
+        {
+            var progressDirectoryPath = "./InProgress/" + difficulty + "/";
+            if (Directory.Exists(progressDirectoryPath))
+            {
+                var directoryInfo = new DirectoryInfo(progressDirectoryPath);
+                if (directoryInfo.GetFiles().Any())
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public void SortGameBoardControls()
@@ -119,9 +160,8 @@ namespace Assignment5
         
         private void GameTimer_Tick(object sender, EventArgs e)
         {
-            var diff = DateTime.Now.Subtract(start_time);
-            m_puzzle.Time = (int)diff.TotalSeconds;
-            TimerLabel.Text = String.Format("{0:00}:{1:00}:{2:00}", diff.Hours, diff.Minutes, diff.Seconds);
+            m_puzzle.Time++;
+            TimerLabel.Text = String.Format("{0:00}:{1:00}:{2:00}", m_puzzle.Hours, m_puzzle.Minutes, m_puzzle.Seconds);
         }
 
         private void PauseButton_Click(object sender, EventArgs e)
@@ -130,7 +170,6 @@ namespace Assignment5
             if (pauseButton.Text == "Pause")
             {
                 GameTimer.Stop();
-                stop_time = DateTime.Now;
                 pauseButton.Text = "Resume";
 
                 foreach (TextBox txt in GameBoard.Controls)
@@ -149,7 +188,6 @@ namespace Assignment5
             } else if (pauseButton.Text == "Resume")
             {
                 GameTimer.Start();
-                start_time += (DateTime.Now - stop_time);
                 pauseButton.Text = "Pause";
 
                 foreach (TextBox txt in GameBoard.Controls)
