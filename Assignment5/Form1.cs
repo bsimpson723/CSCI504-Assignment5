@@ -93,6 +93,11 @@ namespace Assignment5
                     ((TextBox)GameBoard.Controls[i]).ReadOnly = true;
                 }
             }
+
+            PauseButton.Enabled = true;
+            ProgressButton.Enabled = true;
+            SaveButton.Enabled = true;
+            ClearButton.Enabled = true;
         }
 
         public void SortGameBoardControls()

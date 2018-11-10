@@ -1031,6 +1031,7 @@
             // 
             // PauseButton
             // 
+            this.PauseButton.Enabled = false;
             this.PauseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PauseButton.Location = new System.Drawing.Point(547, 437);
             this.PauseButton.Name = "PauseButton";
@@ -1042,6 +1043,7 @@
             // 
             // ProgressButton
             // 
+            this.ProgressButton.Enabled = false;
             this.ProgressButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProgressButton.Location = new System.Drawing.Point(643, 437);
             this.ProgressButton.Name = "ProgressButton";
@@ -1052,6 +1054,7 @@
             // 
             // SaveButton
             // 
+            this.SaveButton.Enabled = false;
             this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveButton.Location = new System.Drawing.Point(739, 437);
             this.SaveButton.Name = "SaveButton";
@@ -1063,6 +1066,7 @@
             // 
             // ClearButton
             // 
+            this.ClearButton.Enabled = false;
             this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClearButton.Location = new System.Drawing.Point(835, 437);
             this.ClearButton.Name = "ClearButton";
@@ -1119,7 +1123,7 @@
             this.TimerLabel.AutoSize = true;
             this.TimerLabel.Location = new System.Drawing.Point(170, 430);
             this.TimerLabel.Name = "TimerLabel";
-            this.TimerLabel.Size = new System.Drawing.Size(164, 42);
+            this.TimerLabel.Size = new System.Drawing.Size(133, 36);
             this.TimerLabel.TabIndex = 92;
             this.TimerLabel.Text = "00:00:00";
             // 
