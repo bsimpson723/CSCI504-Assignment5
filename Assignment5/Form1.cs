@@ -92,7 +92,7 @@ namespace Assignment5
 
         private void SetCellValue(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar >= 49 && e.KeyChar <= 57 && m_currentCell != null)
+            if (e.KeyChar >= 49 && e.KeyChar <= 57 && m_currentCell != null & m_currentCell.ReadOnly != true)
             {
                 m_currentCell.Text = e.KeyChar.ToString();
                 UpdateProgress();
@@ -132,6 +132,7 @@ namespace Assignment5
                 if (m_puzzle.Start[i].ToString() != "0")
                 {
                     GameBoard.Controls[i].Text = m_puzzle.Start[i].ToString();
+                    GameBoard.Controls[i].Font = new Font(GameBoard.Controls[i].Font, FontStyle.Bold);
                     ((TextBox)GameBoard.Controls[i]).ReadOnly = true;
                 }
             }
@@ -155,8 +156,8 @@ namespace Assignment5
             var puzzle = File.ReadAllText(newFileName);
             var puzzleFields = puzzle.Split('\t');
 
-            m_puzzle.Start = puzzleFields[1];
-            m_puzzle.Progress = puzzleFields[1]; //yes, we want the start and progress to be the same on initial load
+            m_puzzle.Start = puzzleFields[0];
+            m_puzzle.Progress = puzzleFields[1];
             m_puzzle.Solution = puzzleFields[2];
             m_puzzle.Time = Convert.ToInt32(puzzleFields[3]);
         }
@@ -175,8 +176,6 @@ namespace Assignment5
             var newFileName = newDirectoryPath + m_puzzle.Name;
             var startString = File.ReadAllText(newFileName);
             m_puzzle.Start = startString.Replace(Environment.NewLine, "");
-
-            m_puzzle.Progress = m_puzzle.Start; //yes, we want the start and progress to be the same on initial load
 
             var solutionFileName = solutionDirectoryPath + m_puzzle.Name;
             var solutionString = File.ReadAllText(solutionFileName);
