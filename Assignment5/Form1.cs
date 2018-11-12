@@ -50,7 +50,10 @@ namespace Assignment5
             var textBox = (TextBox) sender;
             m_currentCell = textBox;
             resetActive();
-            textBox.BackColor = SystemColors.GradientActiveCaption;
+            if (!textBox.ReadOnly)
+            {
+                textBox.BackColor = SystemColors.GradientActiveCaption;
+            }
             EasyButton.Focus();
         }
 
