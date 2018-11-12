@@ -91,6 +91,10 @@ namespace Assignment5
             {
                 GameTimer.Stop();
                 MessageBox.Show("Congratulations, you win!");
+                Directory.CreateDirectory("./Solved/");
+                var saveFileName = "./Solved/" + m_puzzle.Name;
+                File.WriteAllText(saveFileName, m_puzzle.ToString());
+                File.Delete("./InProgress/" + m_puzzle.Difficulty + "/" + m_puzzle.Name);
             }
         }
 
@@ -179,20 +183,29 @@ namespace Assignment5
             var solutionDirectoryPath = "./Solutions/";
 
             DirectoryInfo directoryInfo = new DirectoryInfo(newDirectoryPath);
-            var fileInfo = directoryInfo.GetFiles().FirstOrDefault();
-            m_puzzle.Name = fileInfo.Name;
-            m_puzzle.Difficulty = difficulty;
+            var files = directoryInfo.GetFiles();
+            foreach (var file in files)
+            {
+                if (Solved(file.Name))
+                {
+                    continue;
+                }
 
-            var newFileName = newDirectoryPath + m_puzzle.Name;
-            var startString = File.ReadAllText(newFileName);
-            m_puzzle.Time = 0;
-            m_puzzle.Start = startString.Replace(Environment.NewLine, "");  // we want these three fields that same when loading a new puzzle
-            m_puzzle.Progress = m_puzzle.Start;                             // we want these three fields that same when loading a new puzzle
-            m_sessionProgress = m_puzzle.Start;                             // we want these three fields that same when loading a new puzzle
+                m_puzzle.Name = file.Name;
+                m_puzzle.Difficulty = difficulty;
 
-            var solutionFileName = solutionDirectoryPath + m_puzzle.Name;
-            var solutionString = File.ReadAllText(solutionFileName);
-            m_puzzle.Solution = solutionString.Replace(Environment.NewLine, "");
+                var newFileName = newDirectoryPath + m_puzzle.Name;
+                var startString = File.ReadAllText(newFileName);
+                m_puzzle.Time = 0;
+                m_puzzle.Start = startString.Replace(Environment.NewLine, "");  // we want these three fields that same when loading a new puzzle
+                m_puzzle.Progress = m_puzzle.Start;                             // we want these three fields that same when loading a new puzzle
+                m_sessionProgress = m_puzzle.Start;                             // we want these three fields that same when loading a new puzzle
+
+                var solutionFileName = solutionDirectoryPath + m_puzzle.Name;
+                var solutionString = File.ReadAllText(solutionFileName);
+                m_puzzle.Solution = solutionString.Replace(Environment.NewLine, "");
+                return;
+            }
         }
 
         private bool AnyInProgress(string difficulty)
@@ -202,6 +215,25 @@ namespace Assignment5
             {
                 var directoryInfo = new DirectoryInfo(progressDirectoryPath);
                 if (directoryInfo.GetFiles().Any())
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private bool Solved(string puzzleName)
+        {
+            var solvedDirectoryPath = "./Solved/";
+            if (!Directory.Exists(solvedDirectoryPath))
+            {
+                return false;
+            }
+            var directoryInfo = new DirectoryInfo(solvedDirectoryPath);
+            var files = directoryInfo.GetFiles();
+            foreach (var file in files)
+            {
+                if (file.Name == puzzleName)
                 {
                     return true;
                 }
