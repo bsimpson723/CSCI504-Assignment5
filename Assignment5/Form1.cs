@@ -116,8 +116,9 @@ namespace Assignment5
         {
             foreach (TextBox control in GameBoard.Controls)
             {
+                control.Font = new Font(control.Font, FontStyle.Regular);
                 control.Text = "";
-                control.Enabled = true;
+                control.ReadOnly = false;
             }
         }
 
@@ -181,11 +182,13 @@ namespace Assignment5
             var fileInfo = directoryInfo.GetFiles().FirstOrDefault();
             m_puzzle.Name = fileInfo.Name;
             m_puzzle.Difficulty = difficulty;
-            m_puzzle.Time = 0;
 
             var newFileName = newDirectoryPath + m_puzzle.Name;
             var startString = File.ReadAllText(newFileName);
-            m_puzzle.Start = startString.Replace(Environment.NewLine, "");
+            m_puzzle.Time = 0;
+            m_puzzle.Start = startString.Replace(Environment.NewLine, "");  // we want these three fields that same when loading a new puzzle
+            m_puzzle.Progress = m_puzzle.Start;                             // we want these three fields that same when loading a new puzzle
+            m_sessionProgress = m_puzzle.Start;                             // we want these three fields that same when loading a new puzzle
 
             var solutionFileName = solutionDirectoryPath + m_puzzle.Name;
             var solutionString = File.ReadAllText(solutionFileName);
