@@ -15,6 +15,7 @@ namespace Assignment5
     {
         private Puzzle m_puzzle;
         private TextBox m_currentCell;
+        private string m_sessionProgress;
 
         public Form1()
         {
@@ -80,13 +81,13 @@ namespace Assignment5
                     builder.Append(cell.Text);
                 }
             }
-            m_puzzle.Progress = builder.ToString();
+            m_sessionProgress = builder.ToString();
             CheckForWinner();
         }
 
         private void CheckForWinner()
         {
-            if (m_puzzle.Progress == m_puzzle.Solution)
+            if (m_sessionProgress == m_puzzle.Solution)
             {
                 GameTimer.Stop();
                 MessageBox.Show("Congratulations, you win!");
@@ -106,6 +107,7 @@ namespace Assignment5
         {
             Directory.CreateDirectory("./Inprogress/" + m_puzzle.Difficulty);
             var saveFileName = "./InProgress/" + m_puzzle.Difficulty + "/" + m_puzzle.Name;
+            m_puzzle.Progress = m_sessionProgress;
             File.WriteAllText(saveFileName, m_puzzle.ToString());
             MessageBox.Show("Your puzzle progress was saved successfully!");
         }
@@ -138,6 +140,10 @@ namespace Assignment5
                     GameBoard.Controls[i].Font = new Font(GameBoard.Controls[i].Font, FontStyle.Bold);
                     ((TextBox)GameBoard.Controls[i]).ReadOnly = true;
                 }
+                if (m_puzzle.Progress[i].ToString() != "0")
+                {
+                    GameBoard.Controls[i].Text = m_puzzle.Progress[i].ToString();
+                }
             }
 
             PauseButton.Enabled = true;
@@ -161,6 +167,7 @@ namespace Assignment5
 
             m_puzzle.Start = puzzleFields[0];
             m_puzzle.Progress = puzzleFields[1];
+            m_sessionProgress = puzzleFields[1];
             m_puzzle.Solution = puzzleFields[2];
             m_puzzle.Time = Convert.ToInt32(puzzleFields[3]);
         }
