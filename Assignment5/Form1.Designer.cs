@@ -1211,6 +1211,18 @@
             this.TimerLabel.TabIndex = 92;
             this.TimerLabel.Text = "00:00:00";
             // 
+            // HintButton
+            // 
+            this.HintButton.Enabled = false;
+            this.HintButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HintButton.Location = new System.Drawing.Point(435, 437);
+            this.HintButton.Name = "HintButton";
+            this.HintButton.Size = new System.Drawing.Size(89, 35);
+            this.HintButton.TabIndex = 93;
+            this.HintButton.Text = "Hint";
+            this.HintButton.UseVisualStyleBackColor = true;
+            this.HintButton.Click += new System.EventHandler(this.HintButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 33F);
