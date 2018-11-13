@@ -1132,6 +1132,7 @@
             this.ProgressButton.TabIndex = 85;
             this.ProgressButton.Text = "Progress";
             this.ProgressButton.UseVisualStyleBackColor = true;
+            this.ProgressButton.Click += new System.EventHandler(this.ProgressButton_Click);
             // 
             // SaveButton
             // 
@@ -1155,6 +1156,7 @@
             this.ClearButton.TabIndex = 87;
             this.ClearButton.Text = "Clear";
             this.ClearButton.UseVisualStyleBackColor = true;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // NewGameLabel
             // 
