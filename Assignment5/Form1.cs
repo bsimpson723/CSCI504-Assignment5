@@ -392,5 +392,39 @@ namespace Assignment5
 
             GameBoard.Invalidate();
         }
+        
+        private void HintButton_Click(object sender, EventArgs e)
+        {
+            bool filled = true;
+            for (var i = 0; i < 81; i++)
+            {
+                if (GameBoard.Controls[i].Text == "")
+                {
+                    filled = false;
+                }
+            }
+
+            if (!filled)
+            {
+                Random rnd = new Random();
+                int cell = rnd.Next(0, 80);
+                while (GameBoard.Controls[cell].Text != "")
+                {
+                    cell = rnd.Next(0, 80);
+                    Console.WriteLine(cell + "$");
+                }
+                GameBoard.Controls[cell].Text = m_puzzle.Solution[cell].ToString();
+            } else
+            {
+                for (var i = 0; i < 81; i++)
+                {
+                    TextBox txt = (TextBox) GameBoard.Controls[i];
+                    if (!txt.ReadOnly && txt.Text != m_puzzle.Solution[i].ToString())
+                    {
+                        txt.Text = m_puzzle.Solution[i].ToString();
+                    }
+                }
+            }
+        }
     }
 }
