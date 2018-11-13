@@ -262,6 +262,7 @@ namespace Assignment5
         {
             m_puzzle.Time++;
             TimerLabel.Text = String.Format("{0:00}:{1:00}:{2:00}", m_puzzle.Hours, m_puzzle.Minutes, m_puzzle.Seconds);
+            TrackSuccess();
         }
 
         private void PauseButton_Click(object sender, EventArgs e)
@@ -424,6 +425,49 @@ namespace Assignment5
                         txt.Text = m_puzzle.Solution[i].ToString();
                     }
                 }
+            }
+        }
+        
+        private void TrackSuccess()
+        {
+            bool success = true;
+            for (var i = 0; i < 81; i++)
+            {
+                if (GameBoard.Controls[i].Text != m_puzzle.Solution[i].ToString())
+                {
+                    success = false;
+                }
+            }
+
+            if (success)
+            {
+                GameTimer.Stop();
+                var folderPath = "./Record/";
+                if (!Directory.Exists(folderPath))
+                {
+                    Directory.CreateDirectory(folderPath);
+                }
+                var recordPath = "./Record/" + m_puzzle.Difficulty;
+                if (!File.Exists(recordPath))
+                {
+                    File.Create(recordPath).Dispose();
+                }
+                File.AppendAllText(recordPath, m_puzzle.Time + Environment.NewLine);
+
+                var completeTimes = File.ReadAllLines(recordPath);
+                int fst = Int32.Parse(completeTimes[0]);
+                int sum = 0;
+                foreach (var lines in completeTimes)
+                {
+                    int time = Int32.Parse(lines);
+                    sum += time;
+                    if (time < fst)
+                    {
+                        fst = time;
+                    }
+                }
+                int avg = sum / completeTimes.Length;
+                MessageBox.Show("Congratulations!\nYour completion time: " + m_puzzle.Time + "\nFastest completion time: " + fst + "\nAverage completion time: " + avg);
             }
         }
     }
