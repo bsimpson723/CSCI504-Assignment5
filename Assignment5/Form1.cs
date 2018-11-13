@@ -467,7 +467,12 @@ namespace Assignment5
                     }
                 }
                 int avg = sum / completeTimes.Length;
-                MessageBox.Show("Congratulations!\nYour completion time: " + m_puzzle.Time + "\nFastest completion time: " + fst + "\nAverage completion time: " + avg);
+                MessageBox.Show("Congratulations!\nYour completion time: " 
+                    + String.Format("{0:00}:{1:00}:{2:00}", m_puzzle.Hours, m_puzzle.Minutes, m_puzzle.Seconds) 
+                    + "\nFastest completion time: " 
+                    + String.Format("{0:00}:{1:00}:{2:00}", fst / 3600, (fst % 3600) / 60, fst % 60) 
+                    + "\nAverage completion time: " 
+                    + String.Format("{0:00}:{1:00}:{2:00}", avg / 3600, (avg % 3600) / 60, avg % 60));
             }
         }
     }
