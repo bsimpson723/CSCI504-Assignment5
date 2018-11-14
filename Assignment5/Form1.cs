@@ -143,6 +143,7 @@ namespace Assignment5
                 {
                     GameBoard.Controls[i].Text = m_puzzle.Start[i].ToString();
                     GameBoard.Controls[i].Font = new Font(GameBoard.Controls[i].Font, FontStyle.Bold);
+                    GameBoard.Controls[i].ForeColor = SystemColors.WindowText;
                     ((TextBox)GameBoard.Controls[i]).ReadOnly = true;
                 }
                 if (m_puzzle.Progress[i].ToString() != "0")

@@ -126,7 +126,8 @@
             // 
             // textBox000
             // 
-            this.textBox000.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox000.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox000.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox000.Location = new System.Drawing.Point(3, 3);
             this.textBox000.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox000.Name = "textBox000";
@@ -137,7 +138,8 @@
             // 
             // textBox002
             // 
-            this.textBox002.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox002.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox002.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox002.Location = new System.Drawing.Point(83, 3);
             this.textBox002.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox002.Name = "textBox002";
@@ -148,7 +150,8 @@
             // 
             // textBox001
             // 
-            this.textBox001.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox001.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox001.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox001.Location = new System.Drawing.Point(43, 3);
             this.textBox001.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox001.Name = "textBox001";
@@ -159,7 +162,8 @@
             // 
             // textBox019
             // 
-            this.textBox019.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox019.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox019.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox019.Location = new System.Drawing.Point(43, 83);
             this.textBox019.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox019.Name = "textBox019";
@@ -170,7 +174,8 @@
             // 
             // textBox020
             // 
-            this.textBox020.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox020.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox020.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox020.Location = new System.Drawing.Point(83, 83);
             this.textBox020.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox020.Name = "textBox020";
@@ -181,7 +186,8 @@
             // 
             // textBox018
             // 
-            this.textBox018.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox018.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox018.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox018.Location = new System.Drawing.Point(3, 83);
             this.textBox018.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox018.Name = "textBox018";
@@ -192,7 +198,8 @@
             // 
             // textBox010
             // 
-            this.textBox010.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox010.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox010.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox010.Location = new System.Drawing.Point(43, 43);
             this.textBox010.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox010.Name = "textBox010";
@@ -203,7 +210,8 @@
             // 
             // textBox011
             // 
-            this.textBox011.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox011.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox011.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox011.Location = new System.Drawing.Point(83, 43);
             this.textBox011.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox011.Name = "textBox011";
@@ -214,7 +222,8 @@
             // 
             // textBox009
             // 
-            this.textBox009.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox009.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox009.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox009.Location = new System.Drawing.Point(3, 43);
             this.textBox009.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox009.Name = "textBox009";
@@ -225,7 +234,8 @@
             // 
             // textBox016
             // 
-            this.textBox016.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox016.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox016.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox016.Location = new System.Drawing.Point(293, 43);
             this.textBox016.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox016.Name = "textBox016";
@@ -236,7 +246,8 @@
             // 
             // textBox017
             // 
-            this.textBox017.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox017.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox017.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox017.Location = new System.Drawing.Point(333, 43);
             this.textBox017.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox017.Name = "textBox017";
@@ -247,7 +258,8 @@
             // 
             // textBox015
             // 
-            this.textBox015.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox015.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox015.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox015.Location = new System.Drawing.Point(253, 43);
             this.textBox015.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox015.Name = "textBox015";
@@ -258,7 +270,8 @@
             // 
             // textBox025
             // 
-            this.textBox025.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox025.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox025.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox025.Location = new System.Drawing.Point(293, 83);
             this.textBox025.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox025.Name = "textBox025";
@@ -269,7 +282,8 @@
             // 
             // textBox026
             // 
-            this.textBox026.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox026.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox026.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox026.Location = new System.Drawing.Point(333, 83);
             this.textBox026.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox026.Name = "textBox026";
@@ -280,7 +294,8 @@
             // 
             // textBox024
             // 
-            this.textBox024.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox024.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox024.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox024.Location = new System.Drawing.Point(253, 83);
             this.textBox024.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox024.Name = "textBox024";
@@ -291,7 +306,8 @@
             // 
             // textBox007
             // 
-            this.textBox007.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox007.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox007.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox007.Location = new System.Drawing.Point(293, 3);
             this.textBox007.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox007.Name = "textBox007";
@@ -302,7 +318,8 @@
             // 
             // textBox008
             // 
-            this.textBox008.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox008.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox008.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox008.Location = new System.Drawing.Point(333, 3);
             this.textBox008.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox008.Name = "textBox008";
@@ -313,7 +330,8 @@
             // 
             // textBox006
             // 
-            this.textBox006.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox006.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox006.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox006.Location = new System.Drawing.Point(253, 3);
             this.textBox006.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox006.Name = "textBox006";
@@ -324,7 +342,8 @@
             // 
             // textBox013
             // 
-            this.textBox013.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox013.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox013.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox013.Location = new System.Drawing.Point(168, 43);
             this.textBox013.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox013.Name = "textBox013";
@@ -335,7 +354,8 @@
             // 
             // textBox014
             // 
-            this.textBox014.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox014.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox014.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox014.Location = new System.Drawing.Point(208, 43);
             this.textBox014.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox014.Name = "textBox014";
@@ -346,7 +366,8 @@
             // 
             // textBox012
             // 
-            this.textBox012.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox012.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox012.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox012.Location = new System.Drawing.Point(128, 43);
             this.textBox012.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox012.Name = "textBox012";
@@ -357,7 +378,8 @@
             // 
             // textBox022
             // 
-            this.textBox022.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox022.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox022.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox022.Location = new System.Drawing.Point(168, 83);
             this.textBox022.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox022.Name = "textBox022";
@@ -368,7 +390,8 @@
             // 
             // textBox023
             // 
-            this.textBox023.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox023.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox023.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox023.Location = new System.Drawing.Point(208, 83);
             this.textBox023.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox023.Name = "textBox023";
@@ -379,7 +402,8 @@
             // 
             // textBox021
             // 
-            this.textBox021.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox021.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox021.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox021.Location = new System.Drawing.Point(128, 83);
             this.textBox021.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox021.Name = "textBox021";
@@ -390,7 +414,8 @@
             // 
             // textBox004
             // 
-            this.textBox004.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox004.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox004.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox004.Location = new System.Drawing.Point(168, 3);
             this.textBox004.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox004.Name = "textBox004";
@@ -401,7 +426,8 @@
             // 
             // textBox005
             // 
-            this.textBox005.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox005.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox005.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox005.Location = new System.Drawing.Point(208, 3);
             this.textBox005.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox005.Name = "textBox005";
@@ -412,7 +438,8 @@
             // 
             // textBox003
             // 
-            this.textBox003.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox003.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox003.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox003.Location = new System.Drawing.Point(128, 3);
             this.textBox003.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox003.Name = "textBox003";
@@ -423,7 +450,8 @@
             // 
             // textBox067
             // 
-            this.textBox067.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox067.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox067.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox067.Location = new System.Drawing.Point(168, 293);
             this.textBox067.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox067.Name = "textBox067";
@@ -434,7 +462,8 @@
             // 
             // textBox068
             // 
-            this.textBox068.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox068.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox068.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox068.Location = new System.Drawing.Point(208, 293);
             this.textBox068.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox068.Name = "textBox068";
@@ -445,7 +474,8 @@
             // 
             // textBox066
             // 
-            this.textBox066.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox066.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox066.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox066.Location = new System.Drawing.Point(128, 293);
             this.textBox066.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox066.Name = "textBox066";
@@ -456,7 +486,8 @@
             // 
             // textBox076
             // 
-            this.textBox076.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox076.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox076.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox076.Location = new System.Drawing.Point(168, 333);
             this.textBox076.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox076.Name = "textBox076";
@@ -467,7 +498,8 @@
             // 
             // textBox077
             // 
-            this.textBox077.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox077.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox077.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox077.Location = new System.Drawing.Point(208, 333);
             this.textBox077.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox077.Name = "textBox077";
@@ -478,7 +510,8 @@
             // 
             // textBox075
             // 
-            this.textBox075.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox075.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox075.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox075.Location = new System.Drawing.Point(128, 333);
             this.textBox075.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox075.Name = "textBox075";
@@ -489,7 +522,8 @@
             // 
             // textBox058
             // 
-            this.textBox058.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox058.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox058.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox058.Location = new System.Drawing.Point(168, 253);
             this.textBox058.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox058.Name = "textBox058";
@@ -500,7 +534,8 @@
             // 
             // textBox059
             // 
-            this.textBox059.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox059.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox059.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox059.Location = new System.Drawing.Point(208, 253);
             this.textBox059.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox059.Name = "textBox059";
@@ -511,7 +546,8 @@
             // 
             // textBox057
             // 
-            this.textBox057.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox057.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox057.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox057.Location = new System.Drawing.Point(128, 253);
             this.textBox057.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox057.Name = "textBox057";
@@ -522,7 +558,8 @@
             // 
             // textBox070
             // 
-            this.textBox070.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox070.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox070.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox070.Location = new System.Drawing.Point(293, 293);
             this.textBox070.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox070.Name = "textBox070";
@@ -533,7 +570,8 @@
             // 
             // textBox071
             // 
-            this.textBox071.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox071.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox071.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox071.Location = new System.Drawing.Point(333, 293);
             this.textBox071.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox071.Name = "textBox071";
@@ -544,7 +582,8 @@
             // 
             // textBox069
             // 
-            this.textBox069.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox069.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox069.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox069.Location = new System.Drawing.Point(253, 293);
             this.textBox069.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox069.Name = "textBox069";
@@ -555,7 +594,8 @@
             // 
             // textBox079
             // 
-            this.textBox079.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox079.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox079.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox079.Location = new System.Drawing.Point(293, 333);
             this.textBox079.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox079.Name = "textBox079";
@@ -566,7 +606,8 @@
             // 
             // textBox080
             // 
-            this.textBox080.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox080.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox080.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox080.Location = new System.Drawing.Point(333, 333);
             this.textBox080.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox080.Name = "textBox080";
@@ -577,7 +618,8 @@
             // 
             // textBox078
             // 
-            this.textBox078.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox078.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox078.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox078.Location = new System.Drawing.Point(253, 333);
             this.textBox078.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox078.Name = "textBox078";
@@ -588,7 +630,8 @@
             // 
             // textBox061
             // 
-            this.textBox061.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox061.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox061.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox061.Location = new System.Drawing.Point(293, 253);
             this.textBox061.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox061.Name = "textBox061";
@@ -599,7 +642,8 @@
             // 
             // textBox062
             // 
-            this.textBox062.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox062.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox062.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox062.Location = new System.Drawing.Point(333, 253);
             this.textBox062.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox062.Name = "textBox062";
@@ -610,7 +654,8 @@
             // 
             // textBox060
             // 
-            this.textBox060.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox060.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox060.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox060.Location = new System.Drawing.Point(253, 253);
             this.textBox060.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox060.Name = "textBox060";
@@ -621,7 +666,8 @@
             // 
             // textBox064
             // 
-            this.textBox064.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox064.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox064.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox064.Location = new System.Drawing.Point(43, 293);
             this.textBox064.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox064.Name = "textBox064";
@@ -632,7 +678,8 @@
             // 
             // textBox065
             // 
-            this.textBox065.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox065.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox065.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox065.Location = new System.Drawing.Point(83, 293);
             this.textBox065.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox065.Name = "textBox065";
@@ -643,7 +690,8 @@
             // 
             // textBox063
             // 
-            this.textBox063.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox063.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox063.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox063.Location = new System.Drawing.Point(3, 293);
             this.textBox063.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox063.Name = "textBox063";
@@ -654,7 +702,8 @@
             // 
             // textBox073
             // 
-            this.textBox073.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox073.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox073.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox073.Location = new System.Drawing.Point(43, 333);
             this.textBox073.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox073.Name = "textBox073";
@@ -665,7 +714,8 @@
             // 
             // textBox074
             // 
-            this.textBox074.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox074.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox074.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox074.Location = new System.Drawing.Point(83, 333);
             this.textBox074.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox074.Name = "textBox074";
@@ -676,7 +726,8 @@
             // 
             // textBox072
             // 
-            this.textBox072.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox072.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox072.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox072.Location = new System.Drawing.Point(3, 333);
             this.textBox072.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox072.Name = "textBox072";
@@ -687,7 +738,8 @@
             // 
             // textBox055
             // 
-            this.textBox055.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox055.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox055.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox055.Location = new System.Drawing.Point(43, 253);
             this.textBox055.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox055.Name = "textBox055";
@@ -698,7 +750,8 @@
             // 
             // textBox056
             // 
-            this.textBox056.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox056.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox056.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox056.Location = new System.Drawing.Point(83, 253);
             this.textBox056.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox056.Name = "textBox056";
@@ -709,7 +762,8 @@
             // 
             // textBox054
             // 
-            this.textBox054.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox054.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox054.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox054.Location = new System.Drawing.Point(3, 253);
             this.textBox054.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox054.Name = "textBox054";
@@ -720,7 +774,8 @@
             // 
             // textBox040
             // 
-            this.textBox040.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox040.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox040.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox040.Location = new System.Drawing.Point(168, 168);
             this.textBox040.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox040.Name = "textBox040";
@@ -731,7 +786,8 @@
             // 
             // textBox041
             // 
-            this.textBox041.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox041.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox041.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox041.Location = new System.Drawing.Point(208, 168);
             this.textBox041.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox041.Name = "textBox041";
@@ -742,7 +798,8 @@
             // 
             // textBox039
             // 
-            this.textBox039.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox039.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox039.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox039.Location = new System.Drawing.Point(128, 168);
             this.textBox039.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox039.Name = "textBox039";
@@ -753,7 +810,8 @@
             // 
             // textBox049
             // 
-            this.textBox049.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox049.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox049.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox049.Location = new System.Drawing.Point(168, 208);
             this.textBox049.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox049.Name = "textBox049";
@@ -764,7 +822,8 @@
             // 
             // textBox050
             // 
-            this.textBox050.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox050.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox050.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox050.Location = new System.Drawing.Point(208, 208);
             this.textBox050.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox050.Name = "textBox050";
@@ -775,7 +834,8 @@
             // 
             // textBox048
             // 
-            this.textBox048.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox048.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox048.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox048.Location = new System.Drawing.Point(128, 208);
             this.textBox048.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox048.Name = "textBox048";
@@ -786,7 +846,8 @@
             // 
             // textBox031
             // 
-            this.textBox031.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox031.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox031.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox031.Location = new System.Drawing.Point(168, 128);
             this.textBox031.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox031.Name = "textBox031";
@@ -797,7 +858,8 @@
             // 
             // textBox032
             // 
-            this.textBox032.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox032.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox032.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox032.Location = new System.Drawing.Point(208, 128);
             this.textBox032.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox032.Name = "textBox032";
@@ -808,7 +870,8 @@
             // 
             // textBox030
             // 
-            this.textBox030.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox030.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox030.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox030.Location = new System.Drawing.Point(128, 128);
             this.textBox030.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox030.Name = "textBox030";
@@ -819,7 +882,8 @@
             // 
             // textBox043
             // 
-            this.textBox043.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox043.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox043.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox043.Location = new System.Drawing.Point(293, 168);
             this.textBox043.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox043.Name = "textBox043";
@@ -830,7 +894,8 @@
             // 
             // textBox044
             // 
-            this.textBox044.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox044.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox044.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox044.Location = new System.Drawing.Point(333, 168);
             this.textBox044.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox044.Name = "textBox044";
@@ -841,7 +906,8 @@
             // 
             // textBox042
             // 
-            this.textBox042.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox042.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox042.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox042.Location = new System.Drawing.Point(253, 168);
             this.textBox042.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox042.Name = "textBox042";
@@ -852,7 +918,8 @@
             // 
             // textBox052
             // 
-            this.textBox052.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox052.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox052.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox052.Location = new System.Drawing.Point(293, 208);
             this.textBox052.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox052.Name = "textBox052";
@@ -863,7 +930,8 @@
             // 
             // textBox053
             // 
-            this.textBox053.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox053.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox053.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox053.Location = new System.Drawing.Point(333, 208);
             this.textBox053.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox053.Name = "textBox053";
@@ -874,7 +942,8 @@
             // 
             // textBox051
             // 
-            this.textBox051.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox051.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox051.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox051.Location = new System.Drawing.Point(253, 208);
             this.textBox051.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox051.Name = "textBox051";
@@ -885,7 +954,8 @@
             // 
             // textBox034
             // 
-            this.textBox034.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox034.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox034.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox034.Location = new System.Drawing.Point(293, 128);
             this.textBox034.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox034.Name = "textBox034";
@@ -896,7 +966,8 @@
             // 
             // textBox035
             // 
-            this.textBox035.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox035.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox035.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox035.Location = new System.Drawing.Point(333, 128);
             this.textBox035.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox035.Name = "textBox035";
@@ -907,7 +978,8 @@
             // 
             // textBox033
             // 
-            this.textBox033.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox033.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox033.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox033.Location = new System.Drawing.Point(253, 128);
             this.textBox033.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox033.Name = "textBox033";
@@ -918,7 +990,8 @@
             // 
             // textBox037
             // 
-            this.textBox037.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox037.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox037.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox037.Location = new System.Drawing.Point(43, 168);
             this.textBox037.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox037.Name = "textBox037";
@@ -929,7 +1002,8 @@
             // 
             // textBox038
             // 
-            this.textBox038.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox038.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox038.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox038.Location = new System.Drawing.Point(83, 168);
             this.textBox038.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox038.Name = "textBox038";
@@ -940,7 +1014,8 @@
             // 
             // textBox036
             // 
-            this.textBox036.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox036.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox036.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox036.Location = new System.Drawing.Point(3, 168);
             this.textBox036.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox036.Name = "textBox036";
@@ -951,7 +1026,8 @@
             // 
             // textBox046
             // 
-            this.textBox046.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox046.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox046.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox046.Location = new System.Drawing.Point(43, 208);
             this.textBox046.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox046.Name = "textBox046";
@@ -962,7 +1038,8 @@
             // 
             // textBox047
             // 
-            this.textBox047.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox047.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox047.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox047.Location = new System.Drawing.Point(83, 208);
             this.textBox047.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox047.Name = "textBox047";
@@ -973,7 +1050,8 @@
             // 
             // textBox045
             // 
-            this.textBox045.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox045.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox045.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox045.Location = new System.Drawing.Point(3, 208);
             this.textBox045.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox045.Name = "textBox045";
@@ -984,7 +1062,8 @@
             // 
             // textBox028
             // 
-            this.textBox028.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox028.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox028.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox028.Location = new System.Drawing.Point(43, 128);
             this.textBox028.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox028.Name = "textBox028";
@@ -995,7 +1074,8 @@
             // 
             // textBox029
             // 
-            this.textBox029.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox029.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox029.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox029.Location = new System.Drawing.Point(83, 128);
             this.textBox029.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox029.Name = "textBox029";
@@ -1006,7 +1086,8 @@
             // 
             // textBox027
             // 
-            this.textBox027.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox027.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox027.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox027.Location = new System.Drawing.Point(3, 128);
             this.textBox027.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
             this.textBox027.Name = "textBox027";
