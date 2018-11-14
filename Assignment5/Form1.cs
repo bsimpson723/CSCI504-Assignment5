@@ -16,7 +16,9 @@ namespace Assignment5
         private Puzzle m_puzzle;
         private TextBox m_currentCell;
         private string m_sessionProgress;
-        private bool m_paused = false;
+        private bool m_paused;
+        private bool m_cheated;
+
 
         public Form1()
         {
@@ -56,6 +58,7 @@ namespace Assignment5
             var button = (Button) sender;
             ClearGameBoard();
             LoadGame(button.Text);
+            m_cheated = false;
             GameTimer.Start();
         }
 
@@ -142,6 +145,12 @@ namespace Assignment5
                 LoadNewGame(difficulty);
             }
 
+            if (string.IsNullOrEmpty(m_puzzle.Name))
+            {
+                MessageBox.Show("There are no unsovled " + difficulty + " puzzles remaining");
+                return;
+            }
+
             for (var i = 0; i < 81; i++)
             {
                 if (m_puzzle.Start[i].ToString() != "0")
@@ -193,25 +202,23 @@ namespace Assignment5
             var files = directoryInfo.GetFiles();
             foreach (var file in files)
             {
-                if (Solved(file.Name))
+                if (!Solved(file.Name))
                 {
-                    continue;
+                    m_puzzle.Name = file.Name;
+                    m_puzzle.Difficulty = difficulty;
+
+                    var newFileName = newDirectoryPath + m_puzzle.Name;
+                    var startString = File.ReadAllText(newFileName);
+                    m_puzzle.Time = 0;
+                    m_puzzle.Start = startString.Replace(Environment.NewLine, "").Replace("\n", string.Empty);  // we want these three fields that same when loading a new puzzle
+                    m_puzzle.Progress = m_puzzle.Start;                             // we want these three fields that same when loading a new puzzle
+                    m_sessionProgress = m_puzzle.Start;                             // we want these three fields that same when loading a new puzzle
+
+                    var solutionFileName = solutionDirectoryPath + m_puzzle.Name;
+                    var solutionString = File.ReadAllText(solutionFileName);
+                    m_puzzle.Solution = solutionString.Replace(Environment.NewLine, "").Replace("\n", string.Empty);
+                    return;
                 }
-
-                m_puzzle.Name = file.Name;
-                m_puzzle.Difficulty = difficulty;
-
-                var newFileName = newDirectoryPath + m_puzzle.Name;
-                var startString = File.ReadAllText(newFileName);
-                m_puzzle.Time = 0;
-                m_puzzle.Start = startString.Replace(Environment.NewLine, "").Replace("\n", string.Empty);  // we want these three fields that same when loading a new puzzle
-                m_puzzle.Progress = m_puzzle.Start;                             // we want these three fields that same when loading a new puzzle
-                m_sessionProgress = m_puzzle.Start;                             // we want these three fields that same when loading a new puzzle
-
-                var solutionFileName = solutionDirectoryPath + m_puzzle.Name;
-                var solutionString = File.ReadAllText(solutionFileName);
-                m_puzzle.Solution = solutionString.Replace(Environment.NewLine, "").Replace("\n", string.Empty);
-                return;
             }
         }
 
@@ -313,6 +320,7 @@ namespace Assignment5
         
         private void ClearButton_Click(object sender, EventArgs e)
         {
+            m_cheated = false;
             foreach (TextBox txt in GameBoard.Controls)
             {
                 if (!txt.ReadOnly)
@@ -423,6 +431,7 @@ namespace Assignment5
 
         private void HintButton_Click(object sender, EventArgs e)
         {
+            m_cheated = true;
             bool filled = true;
             for (var i = 0; i < 81; i++)
             {
@@ -471,7 +480,11 @@ namespace Assignment5
                 {
                     File.Create(recordPath).Dispose();
                 }
-                File.AppendAllText(recordPath, m_puzzle.Time + Environment.NewLine);
+
+                if (!m_cheated)
+                {
+                    File.AppendAllText(recordPath, m_puzzle.Time + Environment.NewLine);
+                }
 
                 Directory.CreateDirectory("./Solved/");
                 var saveFileName = "./Solved/" + m_puzzle.Name;
@@ -501,6 +514,8 @@ namespace Assignment5
                     + String.Format("{0:00}:{1:00}:{2:00}", fst / 3600, (fst % 3600) / 60, fst % 60) 
                     + "\nAverage completion time: " 
                     + String.Format("{0:00}:{1:00}:{2:00}", avg / 3600, (avg % 3600) / 60, avg % 60));
+
+                m_puzzle.Clear();
             }
         }
 

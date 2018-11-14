@@ -23,5 +23,15 @@ namespace Assignment5
         {
             return string.Format("{0}\t{1}\t{2}\t{3}", Start, Progress, Solution, Time);
         }
+
+        public void Clear()
+        {
+            Name = string.Empty;
+            Difficulty = string.Empty;
+            Start = string.Empty;
+            Progress = string.Empty;
+            Solution = string.Empty;
+            Time = 0;
+        }
     }
 }
