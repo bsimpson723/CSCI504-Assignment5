@@ -40,6 +40,18 @@ namespace Assignment5
 
         private void LoadGame_Click(object sender, EventArgs e)
         {
+            if (m_sessionProgress != m_puzzle.Progress)
+            {
+                var response = MessageBox.Show("Would you like to save your changes?", "Unsaved changes!", MessageBoxButtons.YesNoCancel);
+                if (response == DialogResult.Cancel)
+                {
+                    return;
+                }
+                if (response == DialogResult.Yes)
+                {
+                    SaveProgress();
+                }
+            }
             var button = (Button) sender;
             ClearGameBoard();
             LoadGame(button.Text);
@@ -108,6 +120,11 @@ namespace Assignment5
         }
 
         private void Save_Click(object sender, EventArgs e)
+        {
+            SaveProgress();
+        }
+
+        private void SaveProgress()
         {
             Directory.CreateDirectory("./Inprogress/" + m_puzzle.Difficulty);
             var saveFileName = "./InProgress/" + m_puzzle.Difficulty + "/" + m_puzzle.Name;
