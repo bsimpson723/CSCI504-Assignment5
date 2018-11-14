@@ -16,6 +16,7 @@ namespace Assignment5
         private Puzzle m_puzzle;
         private TextBox m_currentCell;
         private string m_sessionProgress;
+        private bool m_paused = false;
 
         public Form1()
         {
@@ -40,6 +41,18 @@ namespace Assignment5
 
         private void LoadGame_Click(object sender, EventArgs e)
         {
+            if (m_sessionProgress != m_puzzle.Progress)
+            {
+                var response = MessageBox.Show("Would you like to save your changes?", "Unsaved changes!", MessageBoxButtons.YesNoCancel);
+                if (response == DialogResult.Cancel)
+                {
+                    return;
+                }
+                if (response == DialogResult.Yes)
+                {
+                    SaveProgress();
+                }
+            }
             var button = (Button) sender;
             ClearGameBoard();
             LoadGame(button.Text);
@@ -51,7 +64,7 @@ namespace Assignment5
             var textBox = (TextBox) sender;
             m_currentCell = textBox;
             resetActive();
-            if (!textBox.ReadOnly)
+            if (!textBox.ReadOnly && !m_paused)
             {
                 textBox.BackColor = SystemColors.GradientActiveCaption;
             }
@@ -109,6 +122,11 @@ namespace Assignment5
 
         private void Save_Click(object sender, EventArgs e)
         {
+            SaveProgress();
+        }
+
+        private void SaveProgress()
+        {
             Directory.CreateDirectory("./Inprogress/" + m_puzzle.Difficulty);
             var saveFileName = "./InProgress/" + m_puzzle.Difficulty + "/" + m_puzzle.Name;
             m_puzzle.Progress = m_sessionProgress;
@@ -143,6 +161,7 @@ namespace Assignment5
                 {
                     GameBoard.Controls[i].Text = m_puzzle.Start[i].ToString();
                     GameBoard.Controls[i].Font = new Font(GameBoard.Controls[i].Font, FontStyle.Bold);
+                    GameBoard.Controls[i].ForeColor = SystemColors.WindowText;
                     ((TextBox)GameBoard.Controls[i]).ReadOnly = true;
                 }
                 if (m_puzzle.Progress[i].ToString() != "0")
@@ -271,37 +290,34 @@ namespace Assignment5
             Button pauseButton = (Button)sender;
             if (pauseButton.Text == "Pause")
             {
+                m_paused = true;
                 GameTimer.Stop();
                 pauseButton.Text = "Resume";
 
                 foreach (TextBox txt in GameBoard.Controls)
                 {
-                    if (txt.ReadOnly)
+                    if (txt.Font.Bold)
                     {
                         txt.ReadOnly = false;
-                        txt.BackColor = Color.FromArgb(240, 240, 240);
-                        txt.ForeColor = Color.FromArgb(240, 240, 240);
                     }
-                    else
-                    {
-                        txt.ForeColor = Color.Transparent;
-                    }
+                    txt.ForeColor = Color.Transparent;
                 }
             } else if (pauseButton.Text == "Resume")
             {
+                m_paused = false;
                 GameTimer.Start();
                 pauseButton.Text = "Pause";
 
                 foreach (TextBox txt in GameBoard.Controls)
                 {
-                    if (txt.ForeColor != Color.Transparent)
+                    if (txt.Font.Bold)
                     {
                         txt.ForeColor = Color.Black;
                         txt.ReadOnly = true;
                     }
                     else
                     {
-                        txt.ForeColor = Color.Black;
+                        txt.ForeColor = SystemColors.WindowFrame;
                     }
                 }
             }
