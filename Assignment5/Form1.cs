@@ -155,6 +155,7 @@ namespace Assignment5
             ProgressButton.Enabled = true;
             SaveButton.Enabled = true;
             ClearButton.Enabled = true;
+            HintButton.Enabled = true;
         }
 
         private void LoadInProgressGame(string difficulty)
