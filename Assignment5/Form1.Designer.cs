@@ -121,6 +121,7 @@
             this.MediumButton = new System.Windows.Forms.Button();
             this.HardButton = new System.Windows.Forms.Button();
             this.TimerLabel = new System.Windows.Forms.Label();
+            this.HintButton = new System.Windows.Forms.Button();
             this.GameBoard.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1294,6 +1295,7 @@
             this.ProgressButton.TabIndex = 85;
             this.ProgressButton.Text = "Progress";
             this.ProgressButton.UseVisualStyleBackColor = true;
+            this.ProgressButton.Click += new System.EventHandler(this.ProgressButton_Click);
             // 
             // SaveButton
             // 
@@ -1317,6 +1319,7 @@
             this.ClearButton.TabIndex = 87;
             this.ClearButton.Text = "Clear";
             this.ClearButton.UseVisualStyleBackColor = true;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // NewGameLabel
             // 
@@ -1365,17 +1368,30 @@
             // TimerLabel
             // 
             this.TimerLabel.AutoSize = true;
-            this.TimerLabel.Location = new System.Drawing.Point(170, 430);
+            this.TimerLabel.Location = new System.Drawing.Point(544, 4);
             this.TimerLabel.Name = "TimerLabel";
             this.TimerLabel.Size = new System.Drawing.Size(133, 36);
             this.TimerLabel.TabIndex = 92;
             this.TimerLabel.Text = "00:00:00";
+            // 
+            // HintButton
+            // 
+            this.HintButton.Enabled = false;
+            this.HintButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HintButton.Location = new System.Drawing.Point(836, 4);
+            this.HintButton.Name = "HintButton";
+            this.HintButton.Size = new System.Drawing.Size(89, 36);
+            this.HintButton.TabIndex = 93;
+            this.HintButton.Text = "Hint";
+            this.HintButton.UseVisualStyleBackColor = true;
+            this.HintButton.Click += new System.EventHandler(this.HintButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 33F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 496);
+            this.Controls.Add(this.HintButton);
             this.Controls.Add(this.TimerLabel);
             this.Controls.Add(this.HardButton);
             this.Controls.Add(this.MediumButton);
@@ -1491,6 +1507,7 @@
         private System.Windows.Forms.Button MediumButton;
         private System.Windows.Forms.Button HardButton;
         private System.Windows.Forms.Label TimerLabel;
+        private System.Windows.Forms.Button HintButton;
     }
 }
 

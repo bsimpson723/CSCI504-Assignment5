@@ -174,6 +174,7 @@ namespace Assignment5
             ProgressButton.Enabled = true;
             SaveButton.Enabled = true;
             ClearButton.Enabled = true;
+            HintButton.Enabled = true;
         }
 
         private void LoadInProgressGame(string difficulty)
@@ -216,13 +217,13 @@ namespace Assignment5
                 var newFileName = newDirectoryPath + m_puzzle.Name;
                 var startString = File.ReadAllText(newFileName);
                 m_puzzle.Time = 0;
-                m_puzzle.Start = startString.Replace(Environment.NewLine, "");  // we want these three fields that same when loading a new puzzle
+                m_puzzle.Start = startString.Replace(Environment.NewLine, "").Replace("\n", string.Empty);  // we want these three fields that same when loading a new puzzle
                 m_puzzle.Progress = m_puzzle.Start;                             // we want these three fields that same when loading a new puzzle
                 m_sessionProgress = m_puzzle.Start;                             // we want these three fields that same when loading a new puzzle
 
                 var solutionFileName = solutionDirectoryPath + m_puzzle.Name;
                 var solutionString = File.ReadAllText(solutionFileName);
-                m_puzzle.Solution = solutionString.Replace(Environment.NewLine, "");
+                m_puzzle.Solution = solutionString.Replace(Environment.NewLine, "").Replace("\n", string.Empty);
                 return;
             }
         }
@@ -281,6 +282,7 @@ namespace Assignment5
         {
             m_puzzle.Time++;
             TimerLabel.Text = String.Format("{0:00}:{1:00}:{2:00}", m_puzzle.Hours, m_puzzle.Minutes, m_puzzle.Seconds);
+            TrackSuccess();
         }
 
         private void PauseButton_Click(object sender, EventArgs e)
@@ -318,6 +320,176 @@ namespace Assignment5
                         txt.ForeColor = SystemColors.WindowFrame;
                     }
                 }
+            }
+        }
+        
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            foreach (TextBox txt in GameBoard.Controls)
+            {
+                if (!txt.ReadOnly)
+                {
+                    txt.Text = "";
+                }
+            }
+
+            m_puzzle.Time = 0;
+        }
+
+        private void ProgressButton_Click(object sender, EventArgs e)
+        {
+            int[] row = new int[9];
+            int[] column = new int[9];
+            for (var i = 0; i < 9; i++)
+            {
+                for (int t = 0; t < row.Length; t++)
+                {
+                    row[t] = -1;
+                    column[t] = -1;
+                }
+
+                for (int j = 0; j < 9; j++)
+                {
+                    var currentInput1 = GameBoard.Controls[i * 9 + j].Text;
+                    if (currentInput1 != "")
+                    {
+                        if (row[Int32.Parse(currentInput1) - 1] == -1)
+                        {
+                            row[Int32.Parse(currentInput1) - 1] = i * 9 + j;
+                        }
+                        else
+                        {
+                            for (int t = 0; t < 9; t++)
+                            {
+                                GameBoard.Controls[i * 9 + t].BackColor = Color.Red;
+                            }
+                            continue;
+                        }
+                    }
+
+                    var currentInput2 = GameBoard.Controls[j * 9 + i].Text;
+                    if (currentInput2 != "")
+                    {
+                        if (column[Int32.Parse(currentInput2) - 1] == -1)
+                        {
+                            column[Int32.Parse(currentInput2) - 1] = j * 9 + i;
+                        }
+                        else
+                        {
+                            for (int t = 0; t < 9; t++)
+                            {
+                                GameBoard.Controls[t * 9 + i].BackColor = Color.Red;
+                            }
+                            continue;
+                        }
+                    }
+
+                }
+            }
+
+            var result = true;
+            var emptyCell = 0;
+            for (var i = 0; i < 81; i++)
+            {
+                var currentInput = GameBoard.Controls[i].Text;
+                if (currentInput == "")
+                {
+                    emptyCell++;
+                }
+                else if (m_puzzle.Solution[i].ToString() != currentInput)
+                {
+                    GameBoard.Controls[i].BackColor = Color.Red;
+                    result = false;
+                }
+            }
+
+            if (result)
+            {
+                MessageBox.Show("You're doing well so far! " + emptyCell.ToString() + " remaining cells need defining.");
+            }
+
+            GameBoard.Invalidate();
+        }
+        
+        private void HintButton_Click(object sender, EventArgs e)
+        {
+            bool filled = true;
+            for (var i = 0; i < 81; i++)
+            {
+                if (GameBoard.Controls[i].Text == "")
+                {
+                    filled = false;
+                }
+            }
+
+            if (!filled)
+            {
+                Random rnd = new Random();
+                int cell = rnd.Next(0, 80);
+                while (GameBoard.Controls[cell].Text != "")
+                {
+                    cell = rnd.Next(0, 80);
+                    Console.WriteLine(cell + "$");
+                }
+                GameBoard.Controls[cell].Text = m_puzzle.Solution[cell].ToString();
+            } else
+            {
+                for (var i = 0; i < 81; i++)
+                {
+                    TextBox txt = (TextBox) GameBoard.Controls[i];
+                    if (!txt.ReadOnly && txt.Text != m_puzzle.Solution[i].ToString())
+                    {
+                        txt.Text = m_puzzle.Solution[i].ToString();
+                    }
+                }
+            }
+        }
+        
+        private void TrackSuccess()
+        {
+            bool success = true;
+            for (var i = 0; i < 81; i++)
+            {
+                if (GameBoard.Controls[i].Text != m_puzzle.Solution[i].ToString())
+                {
+                    success = false;
+                }
+            }
+
+            if (success)
+            {
+                GameTimer.Stop();
+                var folderPath = "./Record/";
+                if (!Directory.Exists(folderPath))
+                {
+                    Directory.CreateDirectory(folderPath);
+                }
+                var recordPath = "./Record/" + m_puzzle.Difficulty;
+                if (!File.Exists(recordPath))
+                {
+                    File.Create(recordPath).Dispose();
+                }
+                File.AppendAllText(recordPath, m_puzzle.Time + Environment.NewLine);
+
+                var completeTimes = File.ReadAllLines(recordPath);
+                int fst = Int32.Parse(completeTimes[0]);
+                int sum = 0;
+                foreach (var lines in completeTimes)
+                {
+                    int time = Int32.Parse(lines);
+                    sum += time;
+                    if (time < fst)
+                    {
+                        fst = time;
+                    }
+                }
+                int avg = sum / completeTimes.Length;
+                MessageBox.Show("Congratulations!\nYour completion time: " 
+                    + String.Format("{0:00}:{1:00}:{2:00}", m_puzzle.Hours, m_puzzle.Minutes, m_puzzle.Seconds) 
+                    + "\nFastest completion time: " 
+                    + String.Format("{0:00}:{1:00}:{2:00}", fst / 3600, (fst % 3600) / 60, fst % 60) 
+                    + "\nAverage completion time: " 
+                    + String.Format("{0:00}:{1:00}:{2:00}", avg / 3600, (avg % 3600) / 60, avg % 60));
             }
         }
     }
