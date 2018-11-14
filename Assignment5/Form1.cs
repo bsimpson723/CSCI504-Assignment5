@@ -486,6 +486,15 @@ namespace Assignment5
                 }
                 File.AppendAllText(recordPath, m_puzzle.Time + Environment.NewLine);
 
+                Directory.CreateDirectory("./Solved/");
+                var saveFileName = "./Solved/" + m_puzzle.Name;
+                File.WriteAllText(saveFileName, m_puzzle.ToString());
+
+                if (File.Exists("./InProgress/" + m_puzzle.Difficulty + "/" + m_puzzle.Name))
+                {
+                    File.Delete("./InProgress/" + m_puzzle.Difficulty + "/" + m_puzzle.Name);
+                }
+
                 var completeTimes = File.ReadAllLines(recordPath);
                 int fst = Int32.Parse(completeTimes[0]);
                 int sum = 0;
