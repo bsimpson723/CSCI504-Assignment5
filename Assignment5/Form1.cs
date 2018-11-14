@@ -16,6 +16,7 @@ namespace Assignment5
         private Puzzle m_puzzle;
         private TextBox m_currentCell;
         private string m_sessionProgress;
+        private bool m_paused = false;
 
         public Form1()
         {
@@ -63,7 +64,7 @@ namespace Assignment5
             var textBox = (TextBox) sender;
             m_currentCell = textBox;
             resetActive();
-            if (!textBox.ReadOnly)
+            if (!textBox.ReadOnly && !m_paused)
             {
                 textBox.BackColor = SystemColors.GradientActiveCaption;
             }
@@ -287,37 +288,34 @@ namespace Assignment5
             Button pauseButton = (Button)sender;
             if (pauseButton.Text == "Pause")
             {
+                m_paused = true;
                 GameTimer.Stop();
                 pauseButton.Text = "Resume";
 
                 foreach (TextBox txt in GameBoard.Controls)
                 {
-                    if (txt.ReadOnly)
+                    if (txt.Font.Bold)
                     {
                         txt.ReadOnly = false;
-                        txt.BackColor = Color.FromArgb(240, 240, 240);
-                        txt.ForeColor = Color.FromArgb(240, 240, 240);
                     }
-                    else
-                    {
-                        txt.ForeColor = Color.Transparent;
-                    }
+                    txt.ForeColor = Color.Transparent;
                 }
             } else if (pauseButton.Text == "Resume")
             {
+                m_paused = false;
                 GameTimer.Start();
                 pauseButton.Text = "Pause";
 
                 foreach (TextBox txt in GameBoard.Controls)
                 {
-                    if (txt.ForeColor != Color.Transparent)
+                    if (txt.Font.Bold)
                     {
                         txt.ForeColor = Color.Black;
                         txt.ReadOnly = true;
                     }
                     else
                     {
-                        txt.ForeColor = Color.Black;
+                        txt.ForeColor = SystemColors.WindowFrame;
                     }
                 }
             }
