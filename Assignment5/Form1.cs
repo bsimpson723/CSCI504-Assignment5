@@ -98,19 +98,6 @@ namespace Assignment5
             TrackSuccess();
         }
 
-        private void CheckForWinner()
-        {
-            if (m_sessionProgress == m_puzzle.Solution)
-            {
-                GameTimer.Stop();
-                MessageBox.Show("Congratulations, you win!");
-                Directory.CreateDirectory("./Solved/");
-                var saveFileName = "./Solved/" + m_puzzle.Name;
-                File.WriteAllText(saveFileName, m_puzzle.ToString());
-                File.Delete("./InProgress/" + m_puzzle.Difficulty + "/" + m_puzzle.Name);
-            }
-        }
-
         private void SetCellValue(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar >= 49 && e.KeyChar <= 57 && m_currentCell != null & m_currentCell.ReadOnly != true)
