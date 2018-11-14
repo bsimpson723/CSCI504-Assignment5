@@ -95,7 +95,7 @@ namespace Assignment5
                 }
             }
             m_sessionProgress = builder.ToString();
-            CheckForWinner();
+            TrackSuccess();
         }
 
         private void CheckForWinner()
@@ -282,7 +282,6 @@ namespace Assignment5
         {
             m_puzzle.Time++;
             TimerLabel.Text = String.Format("{0:00}:{1:00}:{2:00}", m_puzzle.Hours, m_puzzle.Minutes, m_puzzle.Seconds);
-            TrackSuccess();
         }
 
         private void PauseButton_Click(object sender, EventArgs e)
@@ -340,6 +339,37 @@ namespace Assignment5
 
         private void ProgressButton_Click(object sender, EventArgs e)
         {
+            CheckRowForDuplicates();
+            CheckColumnsForDuplicateColumns();
+            CheckForInvalidInput();
+        }
+
+        private void CheckForInvalidInput()
+        {
+            var result = true;
+            var emptyCell = 0;
+            for (var i = 0; i < 81; i++)
+            {
+                var currentInput = GameBoard.Controls[i].Text;
+                if (currentInput == "")
+                {
+                    emptyCell++;
+                }
+                else if (m_puzzle.Solution[i].ToString() != currentInput)
+                {
+                    GameBoard.Controls[i].BackColor = Color.Red;
+                    result = false;
+                }
+            }
+
+            if (result)
+            {
+                MessageBox.Show("You're doing well so far! " + emptyCell.ToString() + " remaining cells need defining.");
+            }
+        }
+
+        private void CheckRowForDuplicates()
+        {
             int[] row = new int[9];
             int[] column = new int[9];
             for (var i = 0; i < 9; i++)
@@ -365,10 +395,26 @@ namespace Assignment5
                             {
                                 GameBoard.Controls[i * 9 + t].BackColor = Color.Red;
                             }
-                            continue;
                         }
                     }
+                }
+            }
+        }
 
+        private void CheckColumnsForDuplicateColumns()
+        {
+            CheckRowForDuplicates();
+            int[] row = new int[9];
+            int[] column = new int[9];
+            for (var i = 0; i < 9; i++)
+            {
+                for (int t = 0; t < row.Length; t++)
+                {
+                    row[t] = -1;
+                    column[t] = -1;
+                }
+                for (int j = 0; j < 9; j++)
+                {
                     var currentInput2 = GameBoard.Controls[j * 9 + i].Text;
                     if (currentInput2 != "")
                     {
@@ -382,37 +428,12 @@ namespace Assignment5
                             {
                                 GameBoard.Controls[t * 9 + i].BackColor = Color.Red;
                             }
-                            continue;
                         }
                     }
-
                 }
             }
-
-            var result = true;
-            var emptyCell = 0;
-            for (var i = 0; i < 81; i++)
-            {
-                var currentInput = GameBoard.Controls[i].Text;
-                if (currentInput == "")
-                {
-                    emptyCell++;
-                }
-                else if (m_puzzle.Solution[i].ToString() != currentInput)
-                {
-                    GameBoard.Controls[i].BackColor = Color.Red;
-                    result = false;
-                }
-            }
-
-            if (result)
-            {
-                MessageBox.Show("You're doing well so far! " + emptyCell.ToString() + " remaining cells need defining.");
-            }
-
-            GameBoard.Invalidate();
         }
-        
+
         private void HintButton_Click(object sender, EventArgs e)
         {
             bool filled = true;
@@ -445,20 +466,12 @@ namespace Assignment5
                     }
                 }
             }
+            UpdateProgress();
         }
         
         private void TrackSuccess()
         {
-            bool success = true;
-            for (var i = 0; i < 81; i++)
-            {
-                if (GameBoard.Controls[i].Text != m_puzzle.Solution[i].ToString())
-                {
-                    success = false;
-                }
-            }
-
-            if (success)
+            if (m_sessionProgress == m_puzzle.Solution)
             {
                 GameTimer.Stop();
                 var folderPath = "./Record/";
