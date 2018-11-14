@@ -290,6 +290,7 @@ namespace Assignment5
             Button pauseButton = (Button)sender;
             if (pauseButton.Text == "Pause")
             {
+                DisableControls();
                 m_paused = true;
                 GameTimer.Stop();
                 pauseButton.Text = "Resume";
@@ -304,6 +305,7 @@ namespace Assignment5
                 }
             } else if (pauseButton.Text == "Resume")
             {
+                EnableControls();
                 m_paused = false;
                 GameTimer.Start();
                 pauseButton.Text = "Pause";
@@ -491,6 +493,29 @@ namespace Assignment5
                     + "\nAverage completion time: " 
                     + String.Format("{0:00}:{1:00}:{2:00}", avg / 3600, (avg % 3600) / 60, avg % 60));
             }
+        }
+
+        private void EnableControls()
+        {
+            HardButton.Enabled = true;
+            MediumButton.Enabled = true;
+            EasyButton.Enabled = true;
+            SaveButton.Enabled = true;
+            HintButton.Enabled = true;
+            ProgressButton.Enabled = true;
+            PauseButton.Enabled = true;
+            ClearButton.Enabled = true;
+        }
+
+        private void DisableControls()
+        {
+            HardButton.Enabled = false;
+            MediumButton.Enabled = false;
+            EasyButton.Enabled = false;
+            HintButton.Enabled = false;
+            ProgressButton.Enabled = false;
+            ClearButton.Enabled = false;
+            SaveButton.Enabled = false;
         }
     }
 }
