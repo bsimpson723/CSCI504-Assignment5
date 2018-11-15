@@ -1365,6 +1365,7 @@
             this.PauseButton.Text = "Pause";
             this.PauseButton.UseVisualStyleBackColor = true;
             this.PauseButton.Click += new System.EventHandler(this.PauseButton_Click);
+            this.PauseButton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SetCellValue);
             // 
             // ProgressButton
             // 
@@ -1422,7 +1423,6 @@
             this.EasyButton.Text = "Easy";
             this.EasyButton.UseVisualStyleBackColor = true;
             this.EasyButton.Click += new System.EventHandler(this.LoadGame_Click);
-            this.EasyButton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SetCellValue);
             // 
             // MediumButton
             // 
