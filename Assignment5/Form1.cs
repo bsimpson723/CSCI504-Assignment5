@@ -337,6 +337,7 @@ namespace Assignment5
             CheckRowForDuplicates();
             CheckColumnsForDuplicateColumns();
             CheckForInvalidInput();
+            CheckBlockForDuplicates();
         }
 
         private void CheckForInvalidInput()
@@ -424,6 +425,29 @@ namespace Assignment5
                                 GameBoard.Controls[t * 9 + i].BackColor = Color.Red;
                             }
                         }
+                    }
+                }
+            }
+        }
+
+        private void CheckBlockForDuplicates()
+        {
+            var allCells = new List<TextBox>();
+            foreach (TextBox textbox in GameBoard.Controls)
+            {
+                allCells.Add(textbox);
+            }
+
+            var blockCells = new List<TextBox>();
+            for (int i = 1; i <= 9; i++)
+            {
+                blockCells = allCells.FindAll(x => x.Tag.ToString() == i.ToString());
+                var cellValues = blockCells.SelectMany(x => x.Text);
+                if (cellValues.Count() != cellValues.Distinct().Count())
+                {
+                    foreach (var control in blockCells)
+                    {
+                        control.BackColor = Color.Red;
                     }
                 }
             }
