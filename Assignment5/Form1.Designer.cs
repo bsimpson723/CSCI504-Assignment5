@@ -135,6 +135,7 @@
             this.textBox000.Size = new System.Drawing.Size(41, 41);
             this.textBox000.TabIndex = 0;
             this.textBox000.TabStop = false;
+            this.textBox000.Tag = "1";
             this.textBox000.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox000.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -148,6 +149,7 @@
             this.textBox002.Size = new System.Drawing.Size(41, 41);
             this.textBox002.TabIndex = 2;
             this.textBox002.TabStop = false;
+            this.textBox002.Tag = "1";
             this.textBox002.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox002.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -161,6 +163,7 @@
             this.textBox001.Size = new System.Drawing.Size(41, 41);
             this.textBox001.TabIndex = 1;
             this.textBox001.TabStop = false;
+            this.textBox001.Tag = "1";
             this.textBox001.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox001.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -174,6 +177,7 @@
             this.textBox019.Size = new System.Drawing.Size(41, 41);
             this.textBox019.TabIndex = 19;
             this.textBox019.TabStop = false;
+            this.textBox019.Tag = "1";
             this.textBox019.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox019.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -187,6 +191,7 @@
             this.textBox020.Size = new System.Drawing.Size(41, 41);
             this.textBox020.TabIndex = 20;
             this.textBox020.TabStop = false;
+            this.textBox020.Tag = "1";
             this.textBox020.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox020.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -200,6 +205,7 @@
             this.textBox018.Size = new System.Drawing.Size(41, 41);
             this.textBox018.TabIndex = 18;
             this.textBox018.TabStop = false;
+            this.textBox018.Tag = "1";
             this.textBox018.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox018.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -213,6 +219,7 @@
             this.textBox010.Size = new System.Drawing.Size(41, 41);
             this.textBox010.TabIndex = 10;
             this.textBox010.TabStop = false;
+            this.textBox010.Tag = "1";
             this.textBox010.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox010.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -226,6 +233,7 @@
             this.textBox011.Size = new System.Drawing.Size(41, 41);
             this.textBox011.TabIndex = 11;
             this.textBox011.TabStop = false;
+            this.textBox011.Tag = "1";
             this.textBox011.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox011.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -239,6 +247,7 @@
             this.textBox009.Size = new System.Drawing.Size(41, 41);
             this.textBox009.TabIndex = 9;
             this.textBox009.TabStop = false;
+            this.textBox009.Tag = "1";
             this.textBox009.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox009.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -252,6 +261,7 @@
             this.textBox016.Size = new System.Drawing.Size(41, 41);
             this.textBox016.TabIndex = 16;
             this.textBox016.TabStop = false;
+            this.textBox016.Tag = "3";
             this.textBox016.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox016.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -265,6 +275,7 @@
             this.textBox017.Size = new System.Drawing.Size(41, 41);
             this.textBox017.TabIndex = 17;
             this.textBox017.TabStop = false;
+            this.textBox017.Tag = "3";
             this.textBox017.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox017.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -278,6 +289,7 @@
             this.textBox015.Size = new System.Drawing.Size(41, 41);
             this.textBox015.TabIndex = 15;
             this.textBox015.TabStop = false;
+            this.textBox015.Tag = "3";
             this.textBox015.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox015.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -291,6 +303,7 @@
             this.textBox025.Size = new System.Drawing.Size(41, 41);
             this.textBox025.TabIndex = 25;
             this.textBox025.TabStop = false;
+            this.textBox025.Tag = "3";
             this.textBox025.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox025.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -304,6 +317,7 @@
             this.textBox026.Size = new System.Drawing.Size(41, 41);
             this.textBox026.TabIndex = 26;
             this.textBox026.TabStop = false;
+            this.textBox026.Tag = "3";
             this.textBox026.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox026.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -317,6 +331,7 @@
             this.textBox024.Size = new System.Drawing.Size(41, 41);
             this.textBox024.TabIndex = 24;
             this.textBox024.TabStop = false;
+            this.textBox024.Tag = "3";
             this.textBox024.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox024.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -330,6 +345,7 @@
             this.textBox007.Size = new System.Drawing.Size(41, 41);
             this.textBox007.TabIndex = 7;
             this.textBox007.TabStop = false;
+            this.textBox007.Tag = "3";
             this.textBox007.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox007.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -343,6 +359,7 @@
             this.textBox008.Size = new System.Drawing.Size(41, 41);
             this.textBox008.TabIndex = 8;
             this.textBox008.TabStop = false;
+            this.textBox008.Tag = "3";
             this.textBox008.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox008.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -356,6 +373,7 @@
             this.textBox006.Size = new System.Drawing.Size(41, 41);
             this.textBox006.TabIndex = 6;
             this.textBox006.TabStop = false;
+            this.textBox006.Tag = "3";
             this.textBox006.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox006.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -369,6 +387,7 @@
             this.textBox013.Size = new System.Drawing.Size(41, 41);
             this.textBox013.TabIndex = 13;
             this.textBox013.TabStop = false;
+            this.textBox013.Tag = "2";
             this.textBox013.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox013.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -382,6 +401,7 @@
             this.textBox014.Size = new System.Drawing.Size(41, 41);
             this.textBox014.TabIndex = 14;
             this.textBox014.TabStop = false;
+            this.textBox014.Tag = "2";
             this.textBox014.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox014.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -395,6 +415,7 @@
             this.textBox012.Size = new System.Drawing.Size(41, 41);
             this.textBox012.TabIndex = 12;
             this.textBox012.TabStop = false;
+            this.textBox012.Tag = "2";
             this.textBox012.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox012.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -408,6 +429,7 @@
             this.textBox022.Size = new System.Drawing.Size(41, 41);
             this.textBox022.TabIndex = 22;
             this.textBox022.TabStop = false;
+            this.textBox022.Tag = "2";
             this.textBox022.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox022.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -421,6 +443,7 @@
             this.textBox023.Size = new System.Drawing.Size(41, 41);
             this.textBox023.TabIndex = 23;
             this.textBox023.TabStop = false;
+            this.textBox023.Tag = "2";
             this.textBox023.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox023.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -434,6 +457,7 @@
             this.textBox021.Size = new System.Drawing.Size(41, 41);
             this.textBox021.TabIndex = 21;
             this.textBox021.TabStop = false;
+            this.textBox021.Tag = "2";
             this.textBox021.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox021.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -447,6 +471,7 @@
             this.textBox004.Size = new System.Drawing.Size(41, 41);
             this.textBox004.TabIndex = 4;
             this.textBox004.TabStop = false;
+            this.textBox004.Tag = "2";
             this.textBox004.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox004.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -460,6 +485,7 @@
             this.textBox005.Size = new System.Drawing.Size(41, 41);
             this.textBox005.TabIndex = 5;
             this.textBox005.TabStop = false;
+            this.textBox005.Tag = "2";
             this.textBox005.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox005.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -473,6 +499,7 @@
             this.textBox003.Size = new System.Drawing.Size(41, 41);
             this.textBox003.TabIndex = 3;
             this.textBox003.TabStop = false;
+            this.textBox003.Tag = "2";
             this.textBox003.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox003.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -486,6 +513,7 @@
             this.textBox067.Size = new System.Drawing.Size(41, 41);
             this.textBox067.TabIndex = 67;
             this.textBox067.TabStop = false;
+            this.textBox067.Tag = "8";
             this.textBox067.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox067.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -499,6 +527,7 @@
             this.textBox068.Size = new System.Drawing.Size(41, 41);
             this.textBox068.TabIndex = 68;
             this.textBox068.TabStop = false;
+            this.textBox068.Tag = "8";
             this.textBox068.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox068.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -512,6 +541,7 @@
             this.textBox066.Size = new System.Drawing.Size(41, 41);
             this.textBox066.TabIndex = 66;
             this.textBox066.TabStop = false;
+            this.textBox066.Tag = "8";
             this.textBox066.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox066.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -525,6 +555,7 @@
             this.textBox076.Size = new System.Drawing.Size(41, 41);
             this.textBox076.TabIndex = 76;
             this.textBox076.TabStop = false;
+            this.textBox076.Tag = "8";
             this.textBox076.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox076.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -538,6 +569,7 @@
             this.textBox077.Size = new System.Drawing.Size(41, 41);
             this.textBox077.TabIndex = 77;
             this.textBox077.TabStop = false;
+            this.textBox077.Tag = "8";
             this.textBox077.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox077.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -551,6 +583,7 @@
             this.textBox075.Size = new System.Drawing.Size(41, 41);
             this.textBox075.TabIndex = 75;
             this.textBox075.TabStop = false;
+            this.textBox075.Tag = "8";
             this.textBox075.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox075.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -564,6 +597,7 @@
             this.textBox058.Size = new System.Drawing.Size(41, 41);
             this.textBox058.TabIndex = 58;
             this.textBox058.TabStop = false;
+            this.textBox058.Tag = "8";
             this.textBox058.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox058.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -577,6 +611,7 @@
             this.textBox059.Size = new System.Drawing.Size(41, 41);
             this.textBox059.TabIndex = 59;
             this.textBox059.TabStop = false;
+            this.textBox059.Tag = "8";
             this.textBox059.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox059.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -590,6 +625,7 @@
             this.textBox057.Size = new System.Drawing.Size(41, 41);
             this.textBox057.TabIndex = 57;
             this.textBox057.TabStop = false;
+            this.textBox057.Tag = "8";
             this.textBox057.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox057.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -603,6 +639,7 @@
             this.textBox070.Size = new System.Drawing.Size(41, 41);
             this.textBox070.TabIndex = 70;
             this.textBox070.TabStop = false;
+            this.textBox070.Tag = "9";
             this.textBox070.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox070.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -616,6 +653,7 @@
             this.textBox071.Size = new System.Drawing.Size(41, 41);
             this.textBox071.TabIndex = 71;
             this.textBox071.TabStop = false;
+            this.textBox071.Tag = "9";
             this.textBox071.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox071.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -629,6 +667,7 @@
             this.textBox069.Size = new System.Drawing.Size(41, 41);
             this.textBox069.TabIndex = 69;
             this.textBox069.TabStop = false;
+            this.textBox069.Tag = "9";
             this.textBox069.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox069.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -642,6 +681,7 @@
             this.textBox079.Size = new System.Drawing.Size(41, 41);
             this.textBox079.TabIndex = 79;
             this.textBox079.TabStop = false;
+            this.textBox079.Tag = "9";
             this.textBox079.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox079.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -655,6 +695,7 @@
             this.textBox080.Size = new System.Drawing.Size(41, 41);
             this.textBox080.TabIndex = 80;
             this.textBox080.TabStop = false;
+            this.textBox080.Tag = "9";
             this.textBox080.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox080.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -668,6 +709,7 @@
             this.textBox078.Size = new System.Drawing.Size(41, 41);
             this.textBox078.TabIndex = 78;
             this.textBox078.TabStop = false;
+            this.textBox078.Tag = "9";
             this.textBox078.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox078.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -681,6 +723,7 @@
             this.textBox061.Size = new System.Drawing.Size(41, 41);
             this.textBox061.TabIndex = 61;
             this.textBox061.TabStop = false;
+            this.textBox061.Tag = "9";
             this.textBox061.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox061.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -694,6 +737,7 @@
             this.textBox062.Size = new System.Drawing.Size(41, 41);
             this.textBox062.TabIndex = 62;
             this.textBox062.TabStop = false;
+            this.textBox062.Tag = "9";
             this.textBox062.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox062.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -707,6 +751,7 @@
             this.textBox060.Size = new System.Drawing.Size(41, 41);
             this.textBox060.TabIndex = 60;
             this.textBox060.TabStop = false;
+            this.textBox060.Tag = "9";
             this.textBox060.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox060.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -720,6 +765,7 @@
             this.textBox064.Size = new System.Drawing.Size(41, 41);
             this.textBox064.TabIndex = 64;
             this.textBox064.TabStop = false;
+            this.textBox064.Tag = "7";
             this.textBox064.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox064.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -733,6 +779,7 @@
             this.textBox065.Size = new System.Drawing.Size(41, 41);
             this.textBox065.TabIndex = 65;
             this.textBox065.TabStop = false;
+            this.textBox065.Tag = "7";
             this.textBox065.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox065.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -746,6 +793,7 @@
             this.textBox063.Size = new System.Drawing.Size(41, 41);
             this.textBox063.TabIndex = 63;
             this.textBox063.TabStop = false;
+            this.textBox063.Tag = "7";
             this.textBox063.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox063.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -759,6 +807,7 @@
             this.textBox073.Size = new System.Drawing.Size(41, 41);
             this.textBox073.TabIndex = 73;
             this.textBox073.TabStop = false;
+            this.textBox073.Tag = "7";
             this.textBox073.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox073.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -772,6 +821,7 @@
             this.textBox074.Size = new System.Drawing.Size(41, 41);
             this.textBox074.TabIndex = 74;
             this.textBox074.TabStop = false;
+            this.textBox074.Tag = "7";
             this.textBox074.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox074.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -785,6 +835,7 @@
             this.textBox072.Size = new System.Drawing.Size(41, 41);
             this.textBox072.TabIndex = 72;
             this.textBox072.TabStop = false;
+            this.textBox072.Tag = "7";
             this.textBox072.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox072.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -798,6 +849,7 @@
             this.textBox055.Size = new System.Drawing.Size(41, 41);
             this.textBox055.TabIndex = 55;
             this.textBox055.TabStop = false;
+            this.textBox055.Tag = "7";
             this.textBox055.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox055.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -811,6 +863,7 @@
             this.textBox056.Size = new System.Drawing.Size(41, 41);
             this.textBox056.TabIndex = 56;
             this.textBox056.TabStop = false;
+            this.textBox056.Tag = "7";
             this.textBox056.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox056.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -824,6 +877,7 @@
             this.textBox054.Size = new System.Drawing.Size(41, 41);
             this.textBox054.TabIndex = 54;
             this.textBox054.TabStop = false;
+            this.textBox054.Tag = "7";
             this.textBox054.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox054.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -837,6 +891,7 @@
             this.textBox040.Size = new System.Drawing.Size(41, 41);
             this.textBox040.TabIndex = 40;
             this.textBox040.TabStop = false;
+            this.textBox040.Tag = "5";
             this.textBox040.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox040.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -850,6 +905,7 @@
             this.textBox041.Size = new System.Drawing.Size(41, 41);
             this.textBox041.TabIndex = 41;
             this.textBox041.TabStop = false;
+            this.textBox041.Tag = "5";
             this.textBox041.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox041.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -863,6 +919,7 @@
             this.textBox039.Size = new System.Drawing.Size(41, 41);
             this.textBox039.TabIndex = 39;
             this.textBox039.TabStop = false;
+            this.textBox039.Tag = "5";
             this.textBox039.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox039.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -876,6 +933,7 @@
             this.textBox049.Size = new System.Drawing.Size(41, 41);
             this.textBox049.TabIndex = 49;
             this.textBox049.TabStop = false;
+            this.textBox049.Tag = "5";
             this.textBox049.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox049.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -889,6 +947,7 @@
             this.textBox050.Size = new System.Drawing.Size(41, 41);
             this.textBox050.TabIndex = 50;
             this.textBox050.TabStop = false;
+            this.textBox050.Tag = "5";
             this.textBox050.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox050.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -902,6 +961,7 @@
             this.textBox048.Size = new System.Drawing.Size(41, 41);
             this.textBox048.TabIndex = 48;
             this.textBox048.TabStop = false;
+            this.textBox048.Tag = "5";
             this.textBox048.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox048.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -915,6 +975,7 @@
             this.textBox031.Size = new System.Drawing.Size(41, 41);
             this.textBox031.TabIndex = 31;
             this.textBox031.TabStop = false;
+            this.textBox031.Tag = "5";
             this.textBox031.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox031.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -928,6 +989,7 @@
             this.textBox032.Size = new System.Drawing.Size(41, 41);
             this.textBox032.TabIndex = 32;
             this.textBox032.TabStop = false;
+            this.textBox032.Tag = "5";
             this.textBox032.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox032.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -941,6 +1003,7 @@
             this.textBox030.Size = new System.Drawing.Size(41, 41);
             this.textBox030.TabIndex = 30;
             this.textBox030.TabStop = false;
+            this.textBox030.Tag = "5";
             this.textBox030.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox030.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -954,6 +1017,7 @@
             this.textBox043.Size = new System.Drawing.Size(41, 41);
             this.textBox043.TabIndex = 43;
             this.textBox043.TabStop = false;
+            this.textBox043.Tag = "6";
             this.textBox043.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox043.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -967,6 +1031,7 @@
             this.textBox044.Size = new System.Drawing.Size(41, 41);
             this.textBox044.TabIndex = 44;
             this.textBox044.TabStop = false;
+            this.textBox044.Tag = "6";
             this.textBox044.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox044.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -980,6 +1045,7 @@
             this.textBox042.Size = new System.Drawing.Size(41, 41);
             this.textBox042.TabIndex = 42;
             this.textBox042.TabStop = false;
+            this.textBox042.Tag = "6";
             this.textBox042.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox042.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -993,6 +1059,7 @@
             this.textBox052.Size = new System.Drawing.Size(41, 41);
             this.textBox052.TabIndex = 52;
             this.textBox052.TabStop = false;
+            this.textBox052.Tag = "6";
             this.textBox052.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox052.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -1006,6 +1073,7 @@
             this.textBox053.Size = new System.Drawing.Size(41, 41);
             this.textBox053.TabIndex = 53;
             this.textBox053.TabStop = false;
+            this.textBox053.Tag = "6";
             this.textBox053.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox053.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -1019,6 +1087,7 @@
             this.textBox051.Size = new System.Drawing.Size(41, 41);
             this.textBox051.TabIndex = 51;
             this.textBox051.TabStop = false;
+            this.textBox051.Tag = "6";
             this.textBox051.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox051.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -1032,6 +1101,7 @@
             this.textBox034.Size = new System.Drawing.Size(41, 41);
             this.textBox034.TabIndex = 34;
             this.textBox034.TabStop = false;
+            this.textBox034.Tag = "6";
             this.textBox034.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox034.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -1045,6 +1115,7 @@
             this.textBox035.Size = new System.Drawing.Size(41, 41);
             this.textBox035.TabIndex = 35;
             this.textBox035.TabStop = false;
+            this.textBox035.Tag = "6";
             this.textBox035.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox035.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -1058,6 +1129,7 @@
             this.textBox033.Size = new System.Drawing.Size(41, 41);
             this.textBox033.TabIndex = 33;
             this.textBox033.TabStop = false;
+            this.textBox033.Tag = "6";
             this.textBox033.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox033.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -1071,6 +1143,7 @@
             this.textBox037.Size = new System.Drawing.Size(41, 41);
             this.textBox037.TabIndex = 37;
             this.textBox037.TabStop = false;
+            this.textBox037.Tag = "4";
             this.textBox037.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox037.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -1084,6 +1157,7 @@
             this.textBox038.Size = new System.Drawing.Size(41, 41);
             this.textBox038.TabIndex = 38;
             this.textBox038.TabStop = false;
+            this.textBox038.Tag = "4";
             this.textBox038.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox038.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -1097,6 +1171,7 @@
             this.textBox036.Size = new System.Drawing.Size(41, 41);
             this.textBox036.TabIndex = 36;
             this.textBox036.TabStop = false;
+            this.textBox036.Tag = "4";
             this.textBox036.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox036.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -1110,6 +1185,7 @@
             this.textBox046.Size = new System.Drawing.Size(41, 41);
             this.textBox046.TabIndex = 46;
             this.textBox046.TabStop = false;
+            this.textBox046.Tag = "4";
             this.textBox046.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox046.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -1123,6 +1199,7 @@
             this.textBox047.Size = new System.Drawing.Size(41, 41);
             this.textBox047.TabIndex = 47;
             this.textBox047.TabStop = false;
+            this.textBox047.Tag = "4";
             this.textBox047.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox047.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -1136,6 +1213,7 @@
             this.textBox045.Size = new System.Drawing.Size(41, 41);
             this.textBox045.TabIndex = 45;
             this.textBox045.TabStop = false;
+            this.textBox045.Tag = "4";
             this.textBox045.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox045.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -1149,6 +1227,7 @@
             this.textBox028.Size = new System.Drawing.Size(41, 41);
             this.textBox028.TabIndex = 28;
             this.textBox028.TabStop = false;
+            this.textBox028.Tag = "4";
             this.textBox028.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox028.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -1162,6 +1241,7 @@
             this.textBox029.Size = new System.Drawing.Size(41, 41);
             this.textBox029.TabIndex = 29;
             this.textBox029.TabStop = false;
+            this.textBox029.Tag = "4";
             this.textBox029.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox029.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -1175,6 +1255,7 @@
             this.textBox027.Size = new System.Drawing.Size(41, 41);
             this.textBox027.TabIndex = 27;
             this.textBox027.TabStop = false;
+            this.textBox027.Tag = "4";
             this.textBox027.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox027.Click += new System.EventHandler(this.Cell_Click);
             // 
@@ -1284,6 +1365,7 @@
             this.PauseButton.Text = "Pause";
             this.PauseButton.UseVisualStyleBackColor = true;
             this.PauseButton.Click += new System.EventHandler(this.PauseButton_Click);
+            this.PauseButton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SetCellValue);
             // 
             // ProgressButton
             // 
@@ -1341,7 +1423,6 @@
             this.EasyButton.Text = "Easy";
             this.EasyButton.UseVisualStyleBackColor = true;
             this.EasyButton.Click += new System.EventHandler(this.LoadGame_Click);
-            this.EasyButton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SetCellValue);
             // 
             // MediumButton
             // 
