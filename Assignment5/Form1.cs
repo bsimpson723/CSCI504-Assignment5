@@ -468,13 +468,16 @@ namespace Assignment5
             if (!filled)
             {
                 Random rnd = new Random();
-                int cell = rnd.Next(0, 80);
-                while (GameBoard.Controls[cell].Text != "")
+                var allCells = new List<TextBox>();
+                foreach (TextBox control in GameBoard.Controls)
                 {
-                    cell = rnd.Next(0, 80);
-                    Console.WriteLine(cell + "$");
+                    allCells.Add(control);
                 }
-                GameBoard.Controls[cell].Text = m_puzzle.Solution[cell].ToString();
+
+                var emptyCells = allCells.FindAll(x => string.IsNullOrEmpty(x.Text));
+                int cell = rnd.Next(0, emptyCells.Count - 1);
+                var index = GameBoard.Controls.IndexOf(emptyCells[cell]);
+                emptyCells[cell].Text = m_puzzle.Solution[index].ToString();
             } else
             {
                 for (var i = 0; i < 81; i++)
@@ -520,18 +523,23 @@ namespace Assignment5
                 }
 
                 var completeTimes = File.ReadAllLines(recordPath);
-                int fst = Int32.Parse(completeTimes[0]);
-                int sum = 0;
-                foreach (var lines in completeTimes)
+                int fst = 0;
+                int avg = 0;
+                if (completeTimes.Any())
                 {
-                    int time = Int32.Parse(lines);
-                    sum += time;
-                    if (time < fst)
+                    fst = Int32.Parse(completeTimes[0]);
+                    int sum = 0;
+                    foreach (var lines in completeTimes)
                     {
-                        fst = time;
+                        int time = Int32.Parse(lines);
+                        sum += time;
+                        if (time < fst)
+                        {
+                            fst = time;
+                        }
                     }
+                    avg = sum / completeTimes.Length;
                 }
-                int avg = sum / completeTimes.Length;
                 MessageBox.Show("Congratulations!\nYour completion time: " 
                     + String.Format("{0:00}:{1:00}:{2:00}", m_puzzle.Hours, m_puzzle.Minutes, m_puzzle.Seconds) 
                     + "\nFastest completion time: " 
@@ -540,6 +548,7 @@ namespace Assignment5
                     + String.Format("{0:00}:{1:00}:{2:00}", avg / 3600, (avg % 3600) / 60, avg % 60));
 
                 m_puzzle.Clear();
+                m_sessionProgress = string.Empty;
             }
         }
 
