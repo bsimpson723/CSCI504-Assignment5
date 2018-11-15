@@ -120,6 +120,7 @@ namespace Assignment5
         #endregion
 
         #region UtilityFunctions
+        //Clears the game board before loading a new game so that values aren't left over
         private void ClearGameBoard()
         {
             foreach (TextBox control in GameBoard.Controls)
@@ -130,6 +131,7 @@ namespace Assignment5
             }
         }
 
+        //Sorts the textBoxes and assigns indexes so that they can be used in foreach loops throughout the app
         public void SortGameBoardControls()
         {
 
@@ -147,6 +149,7 @@ namespace Assignment5
 
         }
 
+        //one place to enable all controls when loading or unpausing a game
         private void EnableControls()
         {
             HardButton.Enabled = true;
@@ -159,6 +162,7 @@ namespace Assignment5
             ClearButton.Enabled = true;
         }
 
+        //one place to disable all controls when pausing a game
         private void DisableControls()
         {
             HardButton.Enabled = false;
@@ -170,6 +174,7 @@ namespace Assignment5
             SaveButton.Enabled = false;
         }
 
+        //changes active cell background back to white when selecting a new cell
         private void resetActive()
         {
             foreach (TextBox control in GameBoard.Controls)
@@ -178,6 +183,7 @@ namespace Assignment5
             }
         }
 
+        //updates the session progress string for comparison in the track progress function
         private void UpdateProgress()
         {
             var builder = new StringBuilder();
@@ -199,6 +205,7 @@ namespace Assignment5
         #endregion
 
         #region CheckProgressFunctionality
+        //Checks if any of the cells has in ancorrect value and highlights any that do
         private void CheckForInvalidInput()
         {
             var result = true;
@@ -223,6 +230,7 @@ namespace Assignment5
             }
         }
 
+        //Checks if any rows have a duplicate entry and highlights the entire row if it does
         private void CheckRowForDuplicates()
         {
             int[] row = new int[9];
@@ -256,6 +264,7 @@ namespace Assignment5
             }
         }
 
+        //Check if any columns have a duplicate entry and highlights the entire column if it does
         private void CheckColumnsForDuplicateColumns()
         {
             CheckRowForDuplicates();
@@ -289,6 +298,7 @@ namespace Assignment5
             }
         }
 
+        //check if any blocks have a duplicate entry and highlights the entire block if it does
         private void CheckBlockForDuplicates()
         {
             var allCells = new List<TextBox>();
@@ -314,6 +324,9 @@ namespace Assignment5
         #endregion
 
         #region LoadGameFunctionality
+        //Checks if there are any games in progress
+        //calls loadinprogressgame() if an in progress game exists
+        //calls loadnewgame() if no in progress game exists
         private void LoadGame(string difficulty)
         {
             if (AnyInProgress(difficulty))
@@ -353,6 +366,7 @@ namespace Assignment5
             HintButton.Enabled = true;
         }
 
+        //loads in progress game if it exists
         private void LoadInProgressGame(string difficulty)
         {
             var progressDirectoryPath = "./InProgress/" + difficulty + "/";
@@ -374,6 +388,7 @@ namespace Assignment5
             m_puzzle.Cheated = puzzleFields[4] == "True";
         }
 
+        //loads first game that isn't already solved
         private void LoadNewGame(string difficulty)
         {
             var newDirectoryPath = "./New/" + difficulty + "/";
@@ -403,6 +418,7 @@ namespace Assignment5
             }
         }
 
+        //checks if there are any in progress games in the given difficulty
         private bool AnyInProgress(string difficulty)
         {
             var progressDirectoryPath = "./InProgress/" + difficulty + "/";
@@ -417,6 +433,7 @@ namespace Assignment5
             return false;
         }
 
+        //checks if a given puzzle is already solved
         private bool Solved(string puzzleName)
         {
             var solvedDirectoryPath = "./Solved/";
@@ -438,6 +455,10 @@ namespace Assignment5
         #endregion
 
         #region TrackSuccessFunctionality
+        //checks whether the puzzle is completed after each entry or hint
+        //saves to solved puzzles if it is complete
+        //save to record file if the user didn't cheat
+        //displays statistics
         private void TrackSuccess()
         {
             if (m_sessionProgress == m_puzzle.Solution)
@@ -500,6 +521,7 @@ namespace Assignment5
         #endregion
 
         #region SaveGameFunctionality
+        //saves the game in its current state to be loaded later
         private void SaveProgress()
         {
             Directory.CreateDirectory("./Inprogress/" + m_puzzle.Difficulty);
@@ -511,6 +533,7 @@ namespace Assignment5
         #endregion
 
         #region HintFunctionality
+        //provides a value to a random empty cell
         private void GetHint()
         {
             m_puzzle.Cheated = true;
@@ -553,6 +576,7 @@ namespace Assignment5
         #endregion
 
         #region ClearProgressFunctionality
+        //clears the game to its original state (including the timer and cheated flag)
         private void ClearProgress()
         {
             m_puzzle.Cheated = false;
@@ -569,6 +593,8 @@ namespace Assignment5
         #endregion
 
         #region PauseGameFunctionality
+        //pauses the game, stops the timer, inactivates all of the controls but the pause button
+        //changes text on pause button to resume (and back from resume to pause)
         private void PauseGame(Button pauseButton)
         {
             if (pauseButton.Text == "Pause")
