@@ -26,6 +26,7 @@ namespace Assignment5
             SortGameBoardControls();
         }
 
+        #region EventHandlers
         private void GameBoard_Paint(object sender, PaintEventArgs e)
         {
             var pen = new Pen(Color.Black, 4);
@@ -60,6 +61,31 @@ namespace Assignment5
             GameTimer.Start();
         }
 
+        private void PauseButton_Click(object sender, EventArgs e)
+        {
+            Button pauseButton = (Button)sender;
+            PauseGame(pauseButton);
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            ClearProgress();
+            
+        }
+
+        private void ProgressButton_Click(object sender, EventArgs e)
+        {
+            CheckRowForDuplicates();
+            CheckColumnsForDuplicateColumns();
+            CheckForInvalidInput();
+            CheckBlockForDuplicates();
+        }
+
+        private void HintButton_Click(object sender, EventArgs e)
+        {
+            GetHint();
+        }
+
         private void Cell_Click(object sender, EventArgs e)
         {
             var textBox = (TextBox) sender;
@@ -69,7 +95,79 @@ namespace Assignment5
             {
                 textBox.BackColor = SystemColors.GradientActiveCaption;
             }
-            EasyButton.Focus();
+            PauseButton.Focus();
+        }
+
+        private void SetCellValue(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar >= 49 && e.KeyChar <= 57 && m_currentCell != null & m_currentCell.ReadOnly != true)
+            {
+                m_currentCell.Text = e.KeyChar.ToString();
+                UpdateProgress();
+            }
+        }
+
+        private void GameTimer_Tick(object sender, EventArgs e)
+        {
+            m_puzzle.Time++;
+            TimerLabel.Text = String.Format("{0:00}:{1:00}:{2:00}", m_puzzle.Hours, m_puzzle.Minutes, m_puzzle.Seconds);
+        }
+
+        private void Save_Click(object sender, EventArgs e)
+        {
+            SaveProgress();
+        }
+        #endregion
+
+        #region UtilityFunctions
+        private void ClearGameBoard()
+        {
+            foreach (TextBox control in GameBoard.Controls)
+            {
+                control.Font = new Font(control.Font, FontStyle.Regular);
+                control.Text = "";
+                control.ReadOnly = false;
+            }
+        }
+
+        public void SortGameBoardControls()
+        {
+
+            IEnumerable<TextBox> sortedlist =
+                from muc in GameBoard.Controls.Cast<TextBox>()
+                orderby muc.Name
+                select muc;
+
+            int counter = 0;
+            foreach (TextBox muc in sortedlist)
+            {
+                GameBoard.Controls.SetChildIndex(muc, counter);
+                counter++;
+            }
+
+        }
+
+        private void EnableControls()
+        {
+            HardButton.Enabled = true;
+            MediumButton.Enabled = true;
+            EasyButton.Enabled = true;
+            SaveButton.Enabled = true;
+            HintButton.Enabled = true;
+            ProgressButton.Enabled = true;
+            PauseButton.Enabled = true;
+            ClearButton.Enabled = true;
+        }
+
+        private void DisableControls()
+        {
+            HardButton.Enabled = false;
+            MediumButton.Enabled = false;
+            EasyButton.Enabled = false;
+            HintButton.Enabled = false;
+            ProgressButton.Enabled = false;
+            ClearButton.Enabled = false;
+            SaveButton.Enabled = false;
         }
 
         private void resetActive()
@@ -85,7 +183,7 @@ namespace Assignment5
             var builder = new StringBuilder();
             foreach (TextBox cell in GameBoard.Controls)
             {
-                
+
                 if (string.IsNullOrEmpty(cell.Text))
                 {
                     builder.Append(0);
@@ -98,40 +196,124 @@ namespace Assignment5
             m_sessionProgress = builder.ToString();
             TrackSuccess();
         }
+        #endregion
 
-        private void SetCellValue(object sender, KeyPressEventArgs e)
+        #region CheckProgressFunctionality
+        private void CheckForInvalidInput()
         {
-            if (e.KeyChar >= 49 && e.KeyChar <= 57 && m_currentCell != null & m_currentCell.ReadOnly != true)
+            var result = true;
+            var emptyCell = 0;
+            for (var i = 0; i < 81; i++)
             {
-                m_currentCell.Text = e.KeyChar.ToString();
-                UpdateProgress();
+                var currentInput = GameBoard.Controls[i].Text;
+                if (currentInput == "")
+                {
+                    emptyCell++;
+                }
+                else if (m_puzzle.Solution[i].ToString() != currentInput)
+                {
+                    GameBoard.Controls[i].BackColor = Color.Red;
+                    result = false;
+                }
+            }
+
+            if (result)
+            {
+                MessageBox.Show("You're doing well so far! " + emptyCell.ToString() + " remaining cells need defining.");
             }
         }
 
-        private void Save_Click(object sender, EventArgs e)
+        private void CheckRowForDuplicates()
         {
-            SaveProgress();
-        }
-
-        private void SaveProgress()
-        {
-            Directory.CreateDirectory("./Inprogress/" + m_puzzle.Difficulty);
-            var saveFileName = "./InProgress/" + m_puzzle.Difficulty + "/" + m_puzzle.Name;
-            m_puzzle.Progress = m_sessionProgress;
-            File.WriteAllText(saveFileName, m_puzzle.ToString());
-            MessageBox.Show("Your puzzle progress was saved successfully!");
-        }
-
-        private void ClearGameBoard()
-        {
-            foreach (TextBox control in GameBoard.Controls)
+            int[] row = new int[9];
+            int[] column = new int[9];
+            for (var i = 0; i < 9; i++)
             {
-                control.Font = new Font(control.Font, FontStyle.Regular);
-                control.Text = "";
-                control.ReadOnly = false;
+                for (int t = 0; t < row.Length; t++)
+                {
+                    row[t] = -1;
+                    column[t] = -1;
+                }
+
+                for (int j = 0; j < 9; j++)
+                {
+                    var currentInput1 = GameBoard.Controls[i * 9 + j].Text;
+                    if (currentInput1 != "")
+                    {
+                        if (row[Int32.Parse(currentInput1) - 1] == -1)
+                        {
+                            row[Int32.Parse(currentInput1) - 1] = i * 9 + j;
+                        }
+                        else
+                        {
+                            for (int t = 0; t < 9; t++)
+                            {
+                                GameBoard.Controls[i * 9 + t].BackColor = Color.Red;
+                            }
+                        }
+                    }
+                }
             }
         }
 
+        private void CheckColumnsForDuplicateColumns()
+        {
+            CheckRowForDuplicates();
+            int[] row = new int[9];
+            int[] column = new int[9];
+            for (var i = 0; i < 9; i++)
+            {
+                for (int t = 0; t < row.Length; t++)
+                {
+                    row[t] = -1;
+                    column[t] = -1;
+                }
+                for (int j = 0; j < 9; j++)
+                {
+                    var currentInput2 = GameBoard.Controls[j * 9 + i].Text;
+                    if (currentInput2 != "")
+                    {
+                        if (column[Int32.Parse(currentInput2) - 1] == -1)
+                        {
+                            column[Int32.Parse(currentInput2) - 1] = j * 9 + i;
+                        }
+                        else
+                        {
+                            for (int t = 0; t < 9; t++)
+                            {
+                                GameBoard.Controls[t * 9 + i].BackColor = Color.Red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void CheckBlockForDuplicates()
+        {
+            var allCells = new List<TextBox>();
+            foreach (TextBox textbox in GameBoard.Controls)
+            {
+                allCells.Add(textbox);
+            }
+
+            var blockCells = new List<TextBox>();
+            for (int i = 1; i <= 9; i++)
+            {
+                blockCells = allCells.FindAll(x => x.Tag.ToString() == i.ToString());
+                var cellValues = blockCells.SelectMany(x => x.Text);
+                if (cellValues.Count() != cellValues.Distinct().Count())
+                {
+                    foreach (var control in blockCells)
+                    {
+                        control.BackColor = Color.Red;
+                    }
+                }
+            }
+        }
+        #endregion
+
+        #region LoadGameFunctionality
         private void LoadGame(string difficulty)
         {
             if (AnyInProgress(difficulty))
@@ -253,244 +435,9 @@ namespace Assignment5
             }
             return false;
         }
+        #endregion
 
-        public void SortGameBoardControls()
-        {
-
-            IEnumerable<TextBox> sortedlist =
-                from muc in GameBoard.Controls.Cast<TextBox>()
-                orderby muc.Name
-                select muc;
-
-            int counter = 0;
-            foreach (TextBox muc in sortedlist)
-            {
-                GameBoard.Controls.SetChildIndex(muc, counter);
-                counter++;
-            }
-
-        }
-        
-        private void GameTimer_Tick(object sender, EventArgs e)
-        {
-            m_puzzle.Time++;
-            TimerLabel.Text = String.Format("{0:00}:{1:00}:{2:00}", m_puzzle.Hours, m_puzzle.Minutes, m_puzzle.Seconds);
-        }
-
-        private void PauseButton_Click(object sender, EventArgs e)
-        {
-            Button pauseButton = (Button)sender;
-            if (pauseButton.Text == "Pause")
-            {
-                DisableControls();
-                m_paused = true;
-                GameTimer.Stop();
-                pauseButton.Text = "Resume";
-
-                foreach (TextBox txt in GameBoard.Controls)
-                {
-                    if (txt.Font.Bold)
-                    {
-                        txt.ReadOnly = false;
-                    }
-                    txt.ForeColor = Color.Transparent;
-                }
-            } else if (pauseButton.Text == "Resume")
-            {
-                EnableControls();
-                m_paused = false;
-                GameTimer.Start();
-                pauseButton.Text = "Pause";
-
-                foreach (TextBox txt in GameBoard.Controls)
-                {
-                    if (txt.Font.Bold)
-                    {
-                        txt.ForeColor = Color.Black;
-                        txt.ReadOnly = true;
-                    }
-                    else
-                    {
-                        txt.ForeColor = SystemColors.WindowFrame;
-                    }
-                }
-            }
-        }
-        
-        private void ClearButton_Click(object sender, EventArgs e)
-        {
-            m_puzzle.Cheated = false;
-            foreach (TextBox txt in GameBoard.Controls)
-            {
-                if (!txt.ReadOnly)
-                {
-                    txt.Text = "";
-                }
-            }
-
-            m_puzzle.Time = 0;
-        }
-
-        private void ProgressButton_Click(object sender, EventArgs e)
-        {
-            CheckRowForDuplicates();
-            CheckColumnsForDuplicateColumns();
-            CheckForInvalidInput();
-            CheckBlockForDuplicates();
-        }
-
-        private void CheckForInvalidInput()
-        {
-            var result = true;
-            var emptyCell = 0;
-            for (var i = 0; i < 81; i++)
-            {
-                var currentInput = GameBoard.Controls[i].Text;
-                if (currentInput == "")
-                {
-                    emptyCell++;
-                }
-                else if (m_puzzle.Solution[i].ToString() != currentInput)
-                {
-                    GameBoard.Controls[i].BackColor = Color.Red;
-                    result = false;
-                }
-            }
-
-            if (result)
-            {
-                MessageBox.Show("You're doing well so far! " + emptyCell.ToString() + " remaining cells need defining.");
-            }
-        }
-
-        private void CheckRowForDuplicates()
-        {
-            int[] row = new int[9];
-            int[] column = new int[9];
-            for (var i = 0; i < 9; i++)
-            {
-                for (int t = 0; t < row.Length; t++)
-                {
-                    row[t] = -1;
-                    column[t] = -1;
-                }
-
-                for (int j = 0; j < 9; j++)
-                {
-                    var currentInput1 = GameBoard.Controls[i * 9 + j].Text;
-                    if (currentInput1 != "")
-                    {
-                        if (row[Int32.Parse(currentInput1) - 1] == -1)
-                        {
-                            row[Int32.Parse(currentInput1) - 1] = i * 9 + j;
-                        }
-                        else
-                        {
-                            for (int t = 0; t < 9; t++)
-                            {
-                                GameBoard.Controls[i * 9 + t].BackColor = Color.Red;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        private void CheckColumnsForDuplicateColumns()
-        {
-            CheckRowForDuplicates();
-            int[] row = new int[9];
-            int[] column = new int[9];
-            for (var i = 0; i < 9; i++)
-            {
-                for (int t = 0; t < row.Length; t++)
-                {
-                    row[t] = -1;
-                    column[t] = -1;
-                }
-                for (int j = 0; j < 9; j++)
-                {
-                    var currentInput2 = GameBoard.Controls[j * 9 + i].Text;
-                    if (currentInput2 != "")
-                    {
-                        if (column[Int32.Parse(currentInput2) - 1] == -1)
-                        {
-                            column[Int32.Parse(currentInput2) - 1] = j * 9 + i;
-                        }
-                        else
-                        {
-                            for (int t = 0; t < 9; t++)
-                            {
-                                GameBoard.Controls[t * 9 + i].BackColor = Color.Red;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        private void CheckBlockForDuplicates()
-        {
-            var allCells = new List<TextBox>();
-            foreach (TextBox textbox in GameBoard.Controls)
-            {
-                allCells.Add(textbox);
-            }
-
-            var blockCells = new List<TextBox>();
-            for (int i = 1; i <= 9; i++)
-            {
-                blockCells = allCells.FindAll(x => x.Tag.ToString() == i.ToString());
-                var cellValues = blockCells.SelectMany(x => x.Text);
-                if (cellValues.Count() != cellValues.Distinct().Count())
-                {
-                    foreach (var control in blockCells)
-                    {
-                        control.BackColor = Color.Red;
-                    }
-                }
-            }
-        }
-
-        private void HintButton_Click(object sender, EventArgs e)
-        {
-            m_puzzle.Cheated = true;
-            bool filled = true;
-            for (var i = 0; i < 81; i++)
-            {
-                if (GameBoard.Controls[i].Text == "")
-                {
-                    filled = false;
-                }
-            }
-
-            if (!filled)
-            {
-                Random rnd = new Random();
-                var allCells = new List<TextBox>();
-                foreach (TextBox control in GameBoard.Controls)
-                {
-                    allCells.Add(control);
-                }
-
-                var emptyCells = allCells.FindAll(x => string.IsNullOrEmpty(x.Text));
-                int cell = rnd.Next(0, emptyCells.Count - 1);
-                var index = GameBoard.Controls.IndexOf(emptyCells[cell]);
-                emptyCells[cell].Text = m_puzzle.Solution[index].ToString();
-            } else
-            {
-                for (var i = 0; i < 81; i++)
-                {
-                    TextBox txt = (TextBox) GameBoard.Controls[i];
-                    if (!txt.ReadOnly && txt.Text != m_puzzle.Solution[i].ToString())
-                    {
-                        txt.Text = m_puzzle.Solution[i].ToString();
-                    }
-                }
-            }
-            UpdateProgress();
-        }
-        
+        #region TrackSuccessFunctionality
         private void TrackSuccess()
         {
             if (m_sessionProgress == m_puzzle.Solution)
@@ -539,39 +486,128 @@ namespace Assignment5
                     }
                     avg = sum / completeTimes.Length;
                 }
-                MessageBox.Show("Congratulations!\nYour completion time: " 
-                    + String.Format("{0:00}:{1:00}:{2:00}", m_puzzle.Hours, m_puzzle.Minutes, m_puzzle.Seconds) 
-                    + "\nFastest completion time: " 
-                    + String.Format("{0:00}:{1:00}:{2:00}", fst / 3600, (fst % 3600) / 60, fst % 60) 
-                    + "\nAverage completion time: " 
+                MessageBox.Show("Congratulations!\nYour completion time: "
+                    + String.Format("{0:00}:{1:00}:{2:00}", m_puzzle.Hours, m_puzzle.Minutes, m_puzzle.Seconds)
+                    + "\nFastest completion time: "
+                    + String.Format("{0:00}:{1:00}:{2:00}", fst / 3600, (fst % 3600) / 60, fst % 60)
+                    + "\nAverage completion time: "
                     + String.Format("{0:00}:{1:00}:{2:00}", avg / 3600, (avg % 3600) / 60, avg % 60));
 
                 m_puzzle.Clear();
                 m_sessionProgress = string.Empty;
             }
         }
+        #endregion
 
-        private void EnableControls()
+        #region SaveGameFunctionality
+        private void SaveProgress()
         {
-            HardButton.Enabled = true;
-            MediumButton.Enabled = true;
-            EasyButton.Enabled = true;
-            SaveButton.Enabled = true;
-            HintButton.Enabled = true;
-            ProgressButton.Enabled = true;
-            PauseButton.Enabled = true;
-            ClearButton.Enabled = true;
+            Directory.CreateDirectory("./Inprogress/" + m_puzzle.Difficulty);
+            var saveFileName = "./InProgress/" + m_puzzle.Difficulty + "/" + m_puzzle.Name;
+            m_puzzle.Progress = m_sessionProgress;
+            File.WriteAllText(saveFileName, m_puzzle.ToString());
+            MessageBox.Show("Your puzzle progress was saved successfully!");
         }
+        #endregion
 
-        private void DisableControls()
+        #region HintFunctionality
+        private void GetHint()
         {
-            HardButton.Enabled = false;
-            MediumButton.Enabled = false;
-            EasyButton.Enabled = false;
-            HintButton.Enabled = false;
-            ProgressButton.Enabled = false;
-            ClearButton.Enabled = false;
-            SaveButton.Enabled = false;
+            m_puzzle.Cheated = true;
+            bool filled = true;
+            for (var i = 0; i < 81; i++)
+            {
+                if (GameBoard.Controls[i].Text == "")
+                {
+                    filled = false;
+                }
+            }
+
+            if (!filled)
+            {
+                Random rnd = new Random();
+                var allCells = new List<TextBox>();
+                foreach (TextBox control in GameBoard.Controls)
+                {
+                    allCells.Add(control);
+                }
+
+                var emptyCells = allCells.FindAll(x => string.IsNullOrEmpty(x.Text));
+                int cell = rnd.Next(0, emptyCells.Count - 1);
+                var index = GameBoard.Controls.IndexOf(emptyCells[cell]);
+                emptyCells[cell].Text = m_puzzle.Solution[index].ToString();
+            }
+            else
+            {
+                for (var i = 0; i < 81; i++)
+                {
+                    TextBox txt = (TextBox)GameBoard.Controls[i];
+                    if (!txt.ReadOnly && txt.Text != m_puzzle.Solution[i].ToString())
+                    {
+                        txt.Text = m_puzzle.Solution[i].ToString();
+                    }
+                }
+            }
+            UpdateProgress();
         }
+        #endregion
+
+        #region ClearProgressFunctionality
+        private void ClearProgress()
+        {
+            m_puzzle.Cheated = false;
+            foreach (TextBox txt in GameBoard.Controls)
+            {
+                if (!txt.ReadOnly)
+                {
+                    txt.Text = "";
+                }
+            }
+
+            m_puzzle.Time = 0;
+        }
+        #endregion
+
+        #region PauseGameFunctionality
+        private void PauseGame(Button pauseButton)
+        {
+            if (pauseButton.Text == "Pause")
+            {
+                DisableControls();
+                m_paused = true;
+                GameTimer.Stop();
+                pauseButton.Text = "Resume";
+
+                foreach (TextBox txt in GameBoard.Controls)
+                {
+                    if (txt.Font.Bold)
+                    {
+                        txt.ReadOnly = false;
+                    }
+                    txt.ForeColor = Color.Transparent;
+                }
+            }
+            else if (pauseButton.Text == "Resume")
+            {
+                EnableControls();
+                m_paused = false;
+                GameTimer.Start();
+                pauseButton.Text = "Pause";
+
+                foreach (TextBox txt in GameBoard.Controls)
+                {
+                    if (txt.Font.Bold)
+                    {
+                        txt.ForeColor = Color.Black;
+                        txt.ReadOnly = true;
+                    }
+                    else
+                    {
+                        txt.ForeColor = SystemColors.WindowFrame;
+                    }
+                }
+            }
+        }
+        #endregion
     }
 }
