@@ -14,6 +14,7 @@ namespace Assignment5
         public string Progress { get; set; }
         public string Solution { get; set; }
         public int Time { get; set; }
+        public bool Cheated { get; set; }
         public int Hours => Time / 3600;
         public int Minutes => (Time % 3600) / 60;
         public int Seconds => Time % 60;
@@ -21,7 +22,7 @@ namespace Assignment5
 
         public override string ToString()
         {
-            return string.Format("{0}\t{1}\t{2}\t{3}", Start, Progress, Solution, Time);
+            return string.Format("{0}\t{1}\t{2}\t{3}\t{4}", Start, Progress, Solution, Time, Cheated);
         }
 
         public void Clear()

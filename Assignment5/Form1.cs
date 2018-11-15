@@ -17,7 +17,6 @@ namespace Assignment5
         private TextBox m_currentCell;
         private string m_sessionProgress;
         private bool m_paused;
-        private bool m_cheated;
 
 
         public Form1()
@@ -58,7 +57,6 @@ namespace Assignment5
             var button = (Button) sender;
             ClearGameBoard();
             LoadGame(button.Text);
-            m_cheated = false;
             GameTimer.Start();
         }
 
@@ -191,6 +189,7 @@ namespace Assignment5
             m_sessionProgress = puzzleFields[1];
             m_puzzle.Solution = puzzleFields[2];
             m_puzzle.Time = Convert.ToInt32(puzzleFields[3]);
+            m_puzzle.Cheated = puzzleFields[4] == "True";
         }
 
         private void LoadNewGame(string difficulty)
@@ -320,7 +319,7 @@ namespace Assignment5
         
         private void ClearButton_Click(object sender, EventArgs e)
         {
-            m_cheated = false;
+            m_puzzle.Cheated = false;
             foreach (TextBox txt in GameBoard.Controls)
             {
                 if (!txt.ReadOnly)
@@ -455,7 +454,7 @@ namespace Assignment5
 
         private void HintButton_Click(object sender, EventArgs e)
         {
-            m_cheated = true;
+            m_puzzle.Cheated = true;
             bool filled = true;
             for (var i = 0; i < 81; i++)
             {
@@ -508,7 +507,7 @@ namespace Assignment5
                     File.Create(recordPath).Dispose();
                 }
 
-                if (!m_cheated)
+                if (!m_puzzle.Cheated)
                 {
                     File.AppendAllText(recordPath, m_puzzle.Time + Environment.NewLine);
                 }
