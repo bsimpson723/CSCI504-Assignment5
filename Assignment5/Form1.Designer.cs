@@ -134,6 +134,7 @@ namespace Assignment5
             // 
             // textBox000
             // 
+            this.textBox000.Enabled = false;
             this.textBox000.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox000.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox000.Location = new System.Drawing.Point(3, 3);
@@ -148,6 +149,7 @@ namespace Assignment5
             // 
             // textBox002
             // 
+            this.textBox002.Enabled = false;
             this.textBox002.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox002.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox002.Location = new System.Drawing.Point(83, 3);
@@ -162,6 +164,7 @@ namespace Assignment5
             // 
             // textBox001
             // 
+            this.textBox001.Enabled = false;
             this.textBox001.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox001.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox001.Location = new System.Drawing.Point(43, 3);
@@ -176,6 +179,7 @@ namespace Assignment5
             // 
             // textBox019
             // 
+            this.textBox019.Enabled = false;
             this.textBox019.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox019.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox019.Location = new System.Drawing.Point(43, 83);
@@ -190,6 +194,7 @@ namespace Assignment5
             // 
             // textBox020
             // 
+            this.textBox020.Enabled = false;
             this.textBox020.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox020.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox020.Location = new System.Drawing.Point(83, 83);
@@ -204,6 +209,7 @@ namespace Assignment5
             // 
             // textBox018
             // 
+            this.textBox018.Enabled = false;
             this.textBox018.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox018.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox018.Location = new System.Drawing.Point(3, 83);
@@ -218,6 +224,7 @@ namespace Assignment5
             // 
             // textBox010
             // 
+            this.textBox010.Enabled = false;
             this.textBox010.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox010.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox010.Location = new System.Drawing.Point(43, 43);
@@ -232,6 +239,7 @@ namespace Assignment5
             // 
             // textBox011
             // 
+            this.textBox011.Enabled = false;
             this.textBox011.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox011.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox011.Location = new System.Drawing.Point(83, 43);
@@ -246,6 +254,7 @@ namespace Assignment5
             // 
             // textBox009
             // 
+            this.textBox009.Enabled = false;
             this.textBox009.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox009.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox009.Location = new System.Drawing.Point(3, 43);
@@ -260,6 +269,7 @@ namespace Assignment5
             // 
             // textBox016
             // 
+            this.textBox016.Enabled = false;
             this.textBox016.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox016.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox016.Location = new System.Drawing.Point(293, 43);
@@ -274,6 +284,7 @@ namespace Assignment5
             // 
             // textBox017
             // 
+            this.textBox017.Enabled = false;
             this.textBox017.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox017.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox017.Location = new System.Drawing.Point(333, 43);
@@ -288,6 +299,7 @@ namespace Assignment5
             // 
             // textBox015
             // 
+            this.textBox015.Enabled = false;
             this.textBox015.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox015.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox015.Location = new System.Drawing.Point(253, 43);
@@ -302,6 +314,7 @@ namespace Assignment5
             // 
             // textBox025
             // 
+            this.textBox025.Enabled = false;
             this.textBox025.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox025.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox025.Location = new System.Drawing.Point(293, 83);
@@ -316,6 +329,7 @@ namespace Assignment5
             // 
             // textBox026
             // 
+            this.textBox026.Enabled = false;
             this.textBox026.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox026.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox026.Location = new System.Drawing.Point(333, 83);
@@ -330,6 +344,7 @@ namespace Assignment5
             // 
             // textBox024
             // 
+            this.textBox024.Enabled = false;
             this.textBox024.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox024.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox024.Location = new System.Drawing.Point(253, 83);
@@ -344,6 +359,7 @@ namespace Assignment5
             // 
             // textBox007
             // 
+            this.textBox007.Enabled = false;
             this.textBox007.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox007.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox007.Location = new System.Drawing.Point(293, 3);
@@ -358,6 +374,7 @@ namespace Assignment5
             // 
             // textBox008
             // 
+            this.textBox008.Enabled = false;
             this.textBox008.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox008.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox008.Location = new System.Drawing.Point(333, 3);
@@ -372,6 +389,7 @@ namespace Assignment5
             // 
             // textBox006
             // 
+            this.textBox006.Enabled = false;
             this.textBox006.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox006.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox006.Location = new System.Drawing.Point(253, 3);
@@ -386,6 +404,7 @@ namespace Assignment5
             // 
             // textBox013
             // 
+            this.textBox013.Enabled = false;
             this.textBox013.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox013.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox013.Location = new System.Drawing.Point(168, 43);
@@ -400,6 +419,7 @@ namespace Assignment5
             // 
             // textBox014
             // 
+            this.textBox014.Enabled = false;
             this.textBox014.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox014.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox014.Location = new System.Drawing.Point(208, 43);
@@ -414,6 +434,7 @@ namespace Assignment5
             // 
             // textBox012
             // 
+            this.textBox012.Enabled = false;
             this.textBox012.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox012.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox012.Location = new System.Drawing.Point(128, 43);
@@ -428,6 +449,7 @@ namespace Assignment5
             // 
             // textBox022
             // 
+            this.textBox022.Enabled = false;
             this.textBox022.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox022.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox022.Location = new System.Drawing.Point(168, 83);
@@ -442,6 +464,7 @@ namespace Assignment5
             // 
             // textBox023
             // 
+            this.textBox023.Enabled = false;
             this.textBox023.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox023.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox023.Location = new System.Drawing.Point(208, 83);
@@ -456,6 +479,7 @@ namespace Assignment5
             // 
             // textBox021
             // 
+            this.textBox021.Enabled = false;
             this.textBox021.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox021.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox021.Location = new System.Drawing.Point(128, 83);
@@ -470,6 +494,7 @@ namespace Assignment5
             // 
             // textBox004
             // 
+            this.textBox004.Enabled = false;
             this.textBox004.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox004.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox004.Location = new System.Drawing.Point(168, 3);
@@ -484,6 +509,7 @@ namespace Assignment5
             // 
             // textBox005
             // 
+            this.textBox005.Enabled = false;
             this.textBox005.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox005.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox005.Location = new System.Drawing.Point(208, 3);
@@ -498,6 +524,7 @@ namespace Assignment5
             // 
             // textBox003
             // 
+            this.textBox003.Enabled = false;
             this.textBox003.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox003.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox003.Location = new System.Drawing.Point(128, 3);
@@ -512,6 +539,7 @@ namespace Assignment5
             // 
             // textBox067
             // 
+            this.textBox067.Enabled = false;
             this.textBox067.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox067.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox067.Location = new System.Drawing.Point(168, 293);
@@ -526,6 +554,7 @@ namespace Assignment5
             // 
             // textBox068
             // 
+            this.textBox068.Enabled = false;
             this.textBox068.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox068.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox068.Location = new System.Drawing.Point(208, 293);
@@ -540,6 +569,7 @@ namespace Assignment5
             // 
             // textBox066
             // 
+            this.textBox066.Enabled = false;
             this.textBox066.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox066.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox066.Location = new System.Drawing.Point(128, 293);
@@ -554,6 +584,7 @@ namespace Assignment5
             // 
             // textBox076
             // 
+            this.textBox076.Enabled = false;
             this.textBox076.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox076.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox076.Location = new System.Drawing.Point(168, 333);
@@ -568,6 +599,7 @@ namespace Assignment5
             // 
             // textBox077
             // 
+            this.textBox077.Enabled = false;
             this.textBox077.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox077.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox077.Location = new System.Drawing.Point(208, 333);
@@ -582,6 +614,7 @@ namespace Assignment5
             // 
             // textBox075
             // 
+            this.textBox075.Enabled = false;
             this.textBox075.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox075.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox075.Location = new System.Drawing.Point(128, 333);
@@ -596,6 +629,7 @@ namespace Assignment5
             // 
             // textBox058
             // 
+            this.textBox058.Enabled = false;
             this.textBox058.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox058.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox058.Location = new System.Drawing.Point(168, 253);
@@ -610,6 +644,7 @@ namespace Assignment5
             // 
             // textBox059
             // 
+            this.textBox059.Enabled = false;
             this.textBox059.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox059.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox059.Location = new System.Drawing.Point(208, 253);
@@ -624,6 +659,7 @@ namespace Assignment5
             // 
             // textBox057
             // 
+            this.textBox057.Enabled = false;
             this.textBox057.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox057.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox057.Location = new System.Drawing.Point(128, 253);
@@ -638,6 +674,7 @@ namespace Assignment5
             // 
             // textBox070
             // 
+            this.textBox070.Enabled = false;
             this.textBox070.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox070.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox070.Location = new System.Drawing.Point(293, 293);
@@ -652,6 +689,7 @@ namespace Assignment5
             // 
             // textBox071
             // 
+            this.textBox071.Enabled = false;
             this.textBox071.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox071.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox071.Location = new System.Drawing.Point(333, 293);
@@ -666,6 +704,7 @@ namespace Assignment5
             // 
             // textBox069
             // 
+            this.textBox069.Enabled = false;
             this.textBox069.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox069.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox069.Location = new System.Drawing.Point(253, 293);
@@ -680,6 +719,7 @@ namespace Assignment5
             // 
             // textBox079
             // 
+            this.textBox079.Enabled = false;
             this.textBox079.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox079.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox079.Location = new System.Drawing.Point(293, 333);
@@ -694,6 +734,7 @@ namespace Assignment5
             // 
             // textBox080
             // 
+            this.textBox080.Enabled = false;
             this.textBox080.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox080.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox080.Location = new System.Drawing.Point(333, 333);
@@ -708,6 +749,7 @@ namespace Assignment5
             // 
             // textBox078
             // 
+            this.textBox078.Enabled = false;
             this.textBox078.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox078.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox078.Location = new System.Drawing.Point(253, 333);
@@ -722,6 +764,7 @@ namespace Assignment5
             // 
             // textBox061
             // 
+            this.textBox061.Enabled = false;
             this.textBox061.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox061.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox061.Location = new System.Drawing.Point(293, 253);
@@ -736,6 +779,7 @@ namespace Assignment5
             // 
             // textBox062
             // 
+            this.textBox062.Enabled = false;
             this.textBox062.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox062.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox062.Location = new System.Drawing.Point(333, 253);
@@ -750,6 +794,7 @@ namespace Assignment5
             // 
             // textBox060
             // 
+            this.textBox060.Enabled = false;
             this.textBox060.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox060.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox060.Location = new System.Drawing.Point(253, 253);
@@ -764,6 +809,7 @@ namespace Assignment5
             // 
             // textBox064
             // 
+            this.textBox064.Enabled = false;
             this.textBox064.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox064.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox064.Location = new System.Drawing.Point(43, 293);
@@ -778,6 +824,7 @@ namespace Assignment5
             // 
             // textBox065
             // 
+            this.textBox065.Enabled = false;
             this.textBox065.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox065.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox065.Location = new System.Drawing.Point(83, 293);
@@ -792,6 +839,7 @@ namespace Assignment5
             // 
             // textBox063
             // 
+            this.textBox063.Enabled = false;
             this.textBox063.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox063.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox063.Location = new System.Drawing.Point(3, 293);
@@ -806,6 +854,7 @@ namespace Assignment5
             // 
             // textBox073
             // 
+            this.textBox073.Enabled = false;
             this.textBox073.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox073.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox073.Location = new System.Drawing.Point(43, 333);
@@ -820,6 +869,7 @@ namespace Assignment5
             // 
             // textBox074
             // 
+            this.textBox074.Enabled = false;
             this.textBox074.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox074.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox074.Location = new System.Drawing.Point(83, 333);
@@ -834,6 +884,7 @@ namespace Assignment5
             // 
             // textBox072
             // 
+            this.textBox072.Enabled = false;
             this.textBox072.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox072.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox072.Location = new System.Drawing.Point(3, 333);
@@ -848,6 +899,7 @@ namespace Assignment5
             // 
             // textBox055
             // 
+            this.textBox055.Enabled = false;
             this.textBox055.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox055.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox055.Location = new System.Drawing.Point(43, 253);
@@ -862,6 +914,7 @@ namespace Assignment5
             // 
             // textBox056
             // 
+            this.textBox056.Enabled = false;
             this.textBox056.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox056.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox056.Location = new System.Drawing.Point(83, 253);
@@ -876,6 +929,7 @@ namespace Assignment5
             // 
             // textBox054
             // 
+            this.textBox054.Enabled = false;
             this.textBox054.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox054.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox054.Location = new System.Drawing.Point(3, 253);
@@ -890,6 +944,7 @@ namespace Assignment5
             // 
             // textBox040
             // 
+            this.textBox040.Enabled = false;
             this.textBox040.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox040.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox040.Location = new System.Drawing.Point(168, 168);
@@ -904,6 +959,7 @@ namespace Assignment5
             // 
             // textBox041
             // 
+            this.textBox041.Enabled = false;
             this.textBox041.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox041.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox041.Location = new System.Drawing.Point(208, 168);
@@ -918,6 +974,7 @@ namespace Assignment5
             // 
             // textBox039
             // 
+            this.textBox039.Enabled = false;
             this.textBox039.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox039.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox039.Location = new System.Drawing.Point(128, 168);
@@ -932,6 +989,7 @@ namespace Assignment5
             // 
             // textBox049
             // 
+            this.textBox049.Enabled = false;
             this.textBox049.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox049.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox049.Location = new System.Drawing.Point(168, 208);
@@ -946,6 +1004,7 @@ namespace Assignment5
             // 
             // textBox050
             // 
+            this.textBox050.Enabled = false;
             this.textBox050.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox050.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox050.Location = new System.Drawing.Point(208, 208);
@@ -960,6 +1019,7 @@ namespace Assignment5
             // 
             // textBox048
             // 
+            this.textBox048.Enabled = false;
             this.textBox048.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox048.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox048.Location = new System.Drawing.Point(128, 208);
@@ -974,6 +1034,7 @@ namespace Assignment5
             // 
             // textBox031
             // 
+            this.textBox031.Enabled = false;
             this.textBox031.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox031.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox031.Location = new System.Drawing.Point(168, 128);
@@ -988,6 +1049,7 @@ namespace Assignment5
             // 
             // textBox032
             // 
+            this.textBox032.Enabled = false;
             this.textBox032.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox032.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox032.Location = new System.Drawing.Point(208, 128);
@@ -1002,6 +1064,7 @@ namespace Assignment5
             // 
             // textBox030
             // 
+            this.textBox030.Enabled = false;
             this.textBox030.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox030.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox030.Location = new System.Drawing.Point(128, 128);
@@ -1016,6 +1079,7 @@ namespace Assignment5
             // 
             // textBox043
             // 
+            this.textBox043.Enabled = false;
             this.textBox043.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox043.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox043.Location = new System.Drawing.Point(293, 168);
@@ -1030,6 +1094,7 @@ namespace Assignment5
             // 
             // textBox044
             // 
+            this.textBox044.Enabled = false;
             this.textBox044.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox044.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox044.Location = new System.Drawing.Point(333, 168);
@@ -1044,6 +1109,7 @@ namespace Assignment5
             // 
             // textBox042
             // 
+            this.textBox042.Enabled = false;
             this.textBox042.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox042.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox042.Location = new System.Drawing.Point(253, 168);
@@ -1058,6 +1124,7 @@ namespace Assignment5
             // 
             // textBox052
             // 
+            this.textBox052.Enabled = false;
             this.textBox052.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox052.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox052.Location = new System.Drawing.Point(293, 208);
@@ -1072,6 +1139,7 @@ namespace Assignment5
             // 
             // textBox053
             // 
+            this.textBox053.Enabled = false;
             this.textBox053.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox053.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox053.Location = new System.Drawing.Point(333, 208);
@@ -1086,6 +1154,7 @@ namespace Assignment5
             // 
             // textBox051
             // 
+            this.textBox051.Enabled = false;
             this.textBox051.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox051.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox051.Location = new System.Drawing.Point(253, 208);
@@ -1100,6 +1169,7 @@ namespace Assignment5
             // 
             // textBox034
             // 
+            this.textBox034.Enabled = false;
             this.textBox034.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox034.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox034.Location = new System.Drawing.Point(293, 128);
@@ -1114,6 +1184,7 @@ namespace Assignment5
             // 
             // textBox035
             // 
+            this.textBox035.Enabled = false;
             this.textBox035.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox035.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox035.Location = new System.Drawing.Point(333, 128);
@@ -1128,6 +1199,7 @@ namespace Assignment5
             // 
             // textBox033
             // 
+            this.textBox033.Enabled = false;
             this.textBox033.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox033.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox033.Location = new System.Drawing.Point(253, 128);
@@ -1142,6 +1214,7 @@ namespace Assignment5
             // 
             // textBox037
             // 
+            this.textBox037.Enabled = false;
             this.textBox037.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox037.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox037.Location = new System.Drawing.Point(43, 168);
@@ -1156,6 +1229,7 @@ namespace Assignment5
             // 
             // textBox038
             // 
+            this.textBox038.Enabled = false;
             this.textBox038.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox038.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox038.Location = new System.Drawing.Point(83, 168);
@@ -1170,6 +1244,7 @@ namespace Assignment5
             // 
             // textBox036
             // 
+            this.textBox036.Enabled = false;
             this.textBox036.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox036.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox036.Location = new System.Drawing.Point(3, 168);
@@ -1184,6 +1259,7 @@ namespace Assignment5
             // 
             // textBox046
             // 
+            this.textBox046.Enabled = false;
             this.textBox046.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox046.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox046.Location = new System.Drawing.Point(43, 208);
@@ -1198,6 +1274,7 @@ namespace Assignment5
             // 
             // textBox047
             // 
+            this.textBox047.Enabled = false;
             this.textBox047.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox047.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox047.Location = new System.Drawing.Point(83, 208);
@@ -1212,6 +1289,7 @@ namespace Assignment5
             // 
             // textBox045
             // 
+            this.textBox045.Enabled = false;
             this.textBox045.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox045.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox045.Location = new System.Drawing.Point(3, 208);
@@ -1226,6 +1304,7 @@ namespace Assignment5
             // 
             // textBox028
             // 
+            this.textBox028.Enabled = false;
             this.textBox028.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox028.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox028.Location = new System.Drawing.Point(43, 128);
@@ -1240,6 +1319,7 @@ namespace Assignment5
             // 
             // textBox029
             // 
+            this.textBox029.Enabled = false;
             this.textBox029.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox029.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox029.Location = new System.Drawing.Point(83, 128);
@@ -1254,6 +1334,7 @@ namespace Assignment5
             // 
             // textBox027
             // 
+            this.textBox027.Enabled = false;
             this.textBox027.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox027.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox027.Location = new System.Drawing.Point(3, 128);

@@ -350,6 +350,7 @@ namespace Assignment5
 
             for (var i = 0; i < 81; i++)
             {
+                GameBoard.Controls[i].Enabled = true;
                 if (m_puzzle.Start[i].ToString() != "0")
                 {
                     GameBoard.Controls[i].Text = m_puzzle.Start[i].ToString();
